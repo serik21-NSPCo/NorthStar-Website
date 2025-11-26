@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ | North Star Planning Co</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body id="top">
+  <div class="page">
+    <!-- Shared header -->
+    <header>
+      <div class="nav">
+        <div class="logo">
+          <img src="logo.png" alt="North Star Planning Co logo" class="logo-mark" />
+          <div>
+            <div class="logo-text-main">North Star Planning Co</div>
+            <div class="logo-text-sub">CDCS Planner · Minnesota</div>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="faq.html">FAQ</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="nav-cta">
+          <div class="pill">Now accepting new participants</div>
+          <a href="index.html#contact" class="btn-primary">
+            Contact me
+            <span class="arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">FAQ</div>
+            <h1 class="section-title">Questions about working with North Star</h1>
+          </div>
+          <p class="section-subtitle">
+            Here are some common questions about CDCS planning and how we work with
+            people on disability waivers in Minnesota.
+          </p>
+        </div>
+
+        <div class="faq-grid">
+          <article class="faq-card">
+            <div class="faq-title">Is North Star a good fit?</div>
+            <p>North Star Planning Co may be a good fit if:</p>
+            <ul class="faq-list">
+              <li>You or a family member is on a disability waiver in Minnesota.</li>
+              <li>You’d like help understanding and using CDCS options.</li>
+              <li>You prefer a calm, step-by-step approach instead of rushed decisions.</li>
+              <li>You value clear communication and collaboration with your support network.</li>
+            </ul>
+          </article>
+
+          <article class="faq-card">
+            <div class="faq-title">What can I expect after I reach out?</div>
+            <p>When you submit the contact form:</p>
+            <ul class="faq-list">
+              <li>We respond within <strong>2 business days</strong>.</li>
+              <li>We may ask follow-up questions about your situation and supports.</li>
+              <li>We’ll discuss your specific needs and how CDCS might help.</li>
+              <li>
+                Together, we’ll decide whether North Star is a good fit and outline simple next steps.
+              </li>
+            </ul>
+          </article>
+
+          <article class="faq-card">
+            <div class="faq-title">How do meetings work?</div>
+            <p>We meet in the way that works best for you:</p>
+            <ul class="faq-list">
+              <li>Phone calls for straightforward check-ins or questions.</li>
+              <li>Zoom or video calls when you prefer to meet virtually.</li>
+              <li>In-person meetings when that’s preferred and possible.</li>
+            </ul>
+            <p style="margin-top: 0.4rem;">
+              We can include family members, guardians, or other supports in the way that feels right for you.
+            </p>
+          </article>
+        </div>
+
+        <div style="margin-top: 2rem;">
+          <a href="index.html#contact" class="btn-primary">
+            Ask a different question
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Shared footer -->
+    <footer>
+      <div class="footer-inner">
+        <div>© <span id="year"></span> North Star Planning Co. All rights reserved.</div>
+        <div><a href="#top">Back to top</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

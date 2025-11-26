@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CDCS Referral Form | North Star Planning Co</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body id="top">
+  <div class="page">
+
+    <!-- Shared header / nav -->
+    <header>
+      <div class="nav">
+        <div class="logo">
+          <img src="logo.png" alt="North Star Planning Co logo" class="logo-mark" />
+          <div>
+            <div class="logo-text-main">North Star Planning Co</div>
+            <div class="logo-text-sub">CDCS Planner · Minnesota</div>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="faq.html">FAQ</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="nav-cta">
+          <div class="pill">Now accepting new participants</div>
+          <a href="index.html#contact" class="btn-primary">
+            Contact me
+            <span class="arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Referrals</div>
+            <h1 class="section-title">CDCS Referral Form</h1>
+          </div>
+          <p class="section-subtitle">
+            Case managers, coordinators, and others can use this form to refer a participant
+            for CDCS planning support with North Star Planning Co.
+          </p>
+        </div>
+
+        <article class="contact-card">
+          <h3>Share referral details</h3>
+          <p>
+            Please include contact information for the participant or legal representative,
+            as well as your own contact details if you’re the case manager.
+          </p>
+
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="contact-form"
+          >
+            <!-- Web3Forms hidden fields -->
+            <input type="hidden" name="access_key" value="dc61e0b5-0ac1-4faa-9904-aebcfa4767b6" />
+            <input type="hidden" name="subject" value="New CDCS Referral Submission" />
+            <input type="checkbox" name="botcheck" style="display:none" />
+
+            <div class="field-group">
+              <label for="participant-name">Participant Name</label>
+              <input
+                type="text"
+                id="participant-name"
+                name="Participant Name"
+                required
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="legal-rep-name">Legal Representative Name</label>
+              <input
+                type="text"
+                id="legal-rep-name"
+                name="Legal Representative Name"
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="participant-email">Participant/Representative Email</label>
+              <input
+                type="email"
+                id="participant-email"
+                name="Participant/Representative Email"
+                required
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="participant-phone">Participant/Representative Phone</label>
+              <input
+                type="tel"
+                id="participant-phone"
+                name="Participant/Representative Phone"
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="preferred-contact">Preferred Method of Contact</label>
+              <select
+                id="preferred-contact"
+                name="Preferred Method of Contact"
+                required
+              >
+                <option value="">-- Please select --</option>
+                <option value="Phone">Phone</option>
+                <option value="Email">Email</option>
+                <option value="Text">Text</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="county">County (Minnesota)</label>
+              <select id="county" name="County" required>
+                <option value="">-- Please select --</option>
+                <option value="Aitkin">Aitkin</option>
+                <option value="Anoka">Anoka</option>
+                <option value="Becker">Becker</option>
+                <option value="Beltrami">Beltrami</option>
+                <option value="Benton">Benton</option>
+                <option value="Big Stone">Big Stone</option>
+                <option value="Blue Earth">Blue Earth</option>
+                <option value="Brown">Brown</option>
+                <option value="Carlton">Carlton</option>
+                <option value="Carver">Carver</option>
+                <option value="Cass">Cass</option>
+                <option value="Chippewa">Chippewa</option>
+                <option value="Chisago">Chisago</option>
+                <option value="Clay">Clay</option>
+                <option value="Clearwater">Clearwater</option>
+                <option value="Cook">Cook</option>
+                <option value="Cottonwood">Cottonwood</option>
+                <option value="Crow Wing">Crow Wing</option>
+                <option value="Dakota">Dakota</option>
+                <option value="Dodge">Dodge</option>
+                <option value="Douglas">Douglas</option>
+                <option value="Faribault">Faribault</option>
+                <option value="Fillmore">Fillmore</option>
+                <option value="Freeborn">Freeborn</option>
+                <option value="Goodhue">Goodhue</option>
+                <option value="Grant">Grant</option>
+                <option value="Hennepin">Hennepin</option>
+                <option value="Houston">Houston</option>
+                <option value="Hubbard">Hubbard</option>
+                <option value="Isanti">Isanti</option>
+                <option value="Itasca">Itasca</option>
+                <option value="Jackson">Jackson</option>
+                <option value="Kanabec">Kanabec</option>
+                <option value="Kandiyohi">Kandiyohi</option>
+                <option value="Kittson">Kittson</option>
+                <option value="Koochiching">Koochiching</option>
+                <option value="Lac qui Parle">Lac qui Parle</option>
+                <option value="Lake">Lake</option>
+                <option value="Lake of the Woods">Lake of the Woods</option>
+                <option value="Le Sueur">Le Sueur</option>
+                <option value="Lincoln">Lincoln</option>
+                <option value="Lyon">Lyon</option>
+                <option value="Mahnomen">Mahnomen</option>
+                <option value="Marshall">Marshall</option>
+                <option value="Martin">Martin</option>
+                <option value="McLeod">McLeod</option>
+                <option value="Meeker">Meeker</option>
+                <option value="Mille Lacs">Mille Lacs</option>
+                <option value="Morrison">Morrison</option>
+                <option value="Mower">Mower</option>
+                <option value="Murray">Murray</option>
+                <option value="Nicollet">Nicollet</option>
+                <option value="Nobles">Nobles</option>
+                <option value="Norman">Norman</option>
+                <option value="Olmsted">Olmsted</option>
+                <option value="Otter Tail">Otter Tail</option>
+                <option value="Pennington">Pennington</option>
+                <option value="Pine">Pine</option>
+                <option value="Pipestone">Pipestone</option>
+                <option value="Polk">Polk</option>
+                <option value="Pope">Pope</option>
+                <option value="Ramsey">Ramsey</option>
+                <option value="Red Lake">Red Lake</option>
+                <option value="Redwood">Redwood</option>
+                <option value="Renville">Renville</option>
+                <option value="Rice">Rice</option>
+                <option value="Rock">Rock</option>
+                <option value="Roseau">Roseau</option>
+                <option value="Scott">Scott</option>
+                <option value="Sherburne">Sherburne</option>
+                <option value="Sibley">Sibley</option>
+                <option value="St. Louis">St. Louis</option>
+                <option value="Stearns">Stearns</option>
+                <option value="Steele">Steele</option>
+                <option value="Stevens">Stevens</option>
+                <option value="Swift">Swift</option>
+                <option value="Todd">Todd</option>
+                <option value="Traverse">Traverse</option>
+                <option value="Wabasha">Wabasha</option>
+                <option value="Wadena">Wadena</option>
+                <option value="Waseca">Waseca</option>
+                <option value="Washington">Washington</option>
+                <option value="Watonwan">Watonwan</option>
+                <option value="Wilkin">Wilkin</option>
+                <option value="Winona">Winona</option>
+                <option value="Wright">Wright</option>
+                <option value="Yellow Medicine">Yellow Medicine</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="case-manager-email">Case Manager Email</label>
+              <input
+                type="email"
+                id="case-manager-email"
+                name="Case Manager Email"
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="comments">Comment</label>
+              <textarea
+                id="comments"
+                name="Comment"
+                rows="5"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">
+              Submit referral <span class="arrow">↗</span>
+            </button>
+          </form>
+        </article>
+      </section>
+    </main>
+
+    <!-- Shared footer -->
+    <footer>
+      <div class="footer-inner">
+        <div>© <span id="year"></span> North Star Planning Co. All rights reserved.</div>
+        <div><a href="#top">Back to top</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
