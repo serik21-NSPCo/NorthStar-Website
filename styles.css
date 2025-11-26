@@ -348,4 +348,19 @@ footer {
   line-height: 1;
 }
 
+/* Mobile layout: stack the two forms instead of side-by-side */
+@media (max-width: 900px) {
+  .two-column {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  .about-card,
+  .contact-card {
+    width: 100%;
+  }
+}
+
+
+
 
