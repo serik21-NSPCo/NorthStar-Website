@@ -348,6 +348,14 @@ footer {
   line-height: 1;
 }
 
+.simple-subtitle {
+  margin-top: 6px;          /* small space under main title */
+  font-size: 1.15rem;       /* slightly larger text */
+  font-weight: 600;         /* semi-bold */
+  color: #2e8b57;           /* a clean medium green */
+  text-align: center;       /* matches your title alignment */
+}
+
 /* Mobile layout: stack the two forms instead of side-by-side */
 @media (max-width: 900px) {
   .two-column {
@@ -360,13 +368,7 @@ footer {
     width: 100%;
 }
 
-.simple-subtitle {
-  margin-top: 6px;          /* small space under main title */
-  font-size: 1.15rem;       /* slightly larger text */
-  font-weight: 600;         /* semi-bold */
-  color: #2e8b57;           /* a clean medium green */
-  text-align: center;       /* matches your title alignment */
-}
+
 
 
 
