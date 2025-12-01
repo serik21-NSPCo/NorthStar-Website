@@ -353,20 +353,21 @@ footer {
   .two-column {
     grid-template-columns: minmax(0, 1fr);
     gap: 1.25rem;
-  }
+}
 
   .about-card,
   .contact-card {
     width: 100%;
-  }
+}
 
-  .simple-subtitle {
+.simple-subtitle {
   margin-top: 6px;          /* small space under main title */
   font-size: 1.15rem;       /* slightly larger text */
   font-weight: 600;         /* semi-bold */
   color: #2e8b57;           /* a clean medium green */
   text-align: center;       /* matches your title alignment */
 }
+
 
 
 
