@@ -359,7 +359,17 @@ footer {
   .contact-card {
     width: 100%;
   }
+
+  .simple-subtitle {
+  margin-top: 6px;          /* small space under main title */
+  font-size: 1.15rem;       /* slightly larger text */
+  font-weight: 600;         /* semi-bold */
+  color: #2e8b57;           /* a clean medium green */
+  text-align: center;       /* matches your title alignment */
 }
+
+}
+
 
 
 
