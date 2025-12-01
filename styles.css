@@ -346,6 +346,7 @@ footer {
 .simple-title-single {
   margin-top: -1.8rem;    /* overlaps upward into the logo area */
   line-height: 1;
+  color: #2e8b57
 }
 
 .simple-subtitle {
@@ -367,6 +368,7 @@ footer {
   .contact-card {
     width: 100%;
 }
+
 
 
 
