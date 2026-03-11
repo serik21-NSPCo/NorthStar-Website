@@ -4051,3 +4051,16 @@ body:not(.is-preload) {
 		animation: northstarGradientShift 14s ease infinite;
 	}
 }
+#header .logo-image {
+	max-width: 520px !important;
+	width: 100% !important;
+	height: auto !important;
+	display: block;
+	margin: 0 auto 1.5em auto;
+}
+
+@media screen and (max-width: 736px) {
+	#header .logo-image {
+		max-width: 320px !important;
+	}
+}
