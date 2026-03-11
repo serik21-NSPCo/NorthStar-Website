@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Contact Us | North Star Support Co.</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="description" content="Contact North Star Support Co. for Minnesota CDCS support planning services, questions about waiver support planning, or to submit a referral." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style>
+    .two-form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2em;
+      align-items: start;
+      margin-top: 2em;
+    }
+
+    .field-group {
+      margin-bottom: 1.25em;
+    }
+
+    .field-group label {
+      display: block;
+      margin-bottom: 0.5em;
+      color: var(--ns-navy);
+      font-size: 0.82em;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: 1.5em;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75em;
+      margin-top: 0.25em;
+    }
+
+    .checkbox-row input[type="checkbox"] {
+      margin-top: 0.35em;
+      width: auto;
+      flex: 0 0 auto;
+    }
+
+    .checkbox-row span {
+      line-height: 1.5em;
+    }
+
+    .contact-card h2,
+    .contact-card h3 {
+      margin-top: 0;
+    }
+
+    .contact-card .button,
+    .contact-card button {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 980px) {
+      .two-form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body class="is-preload">
+
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div id="header">
+    <img src="images/logo.png" alt="North Star Support Co. logo" class="logo-image" />
+    <h1>Contact North Star Support Co.</h1>
+    <p>We are here to answer questions, provide more information, and help connect you with the right planner for your county.</p>
+  </div>
+
+  <div id="main">
+
+    <header class="major container medium">
+      <h2>Let’s Start the Conversation</h2>
+      <p>Whether you are a family member, client, case manager, or referral partner, we welcome your questions and would be glad to connect.</p>
+    </header>
+
+    <div class="box container">
+      <div class="two-form-grid">
+
+        <!-- ASK A QUESTION FORM -->
+        <section class="contact-card">
+          <h3>Have a Question?</h3>
+          <p>Ask about CDCS planning, services, or next steps. We’ll respond within <strong>2 business days</strong>.</p>
+
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="dc61e0b5-0ac1-4faa-9904-aebcfa4767b6" />
+            <input type="hidden" name="subject" value="New Contact Form Submission" />
+            <input type="checkbox" name="botcheck" style="display:none" />
+
+            <div class="field-group">
+              <label for="contact-name">Name</label>
+              <input id="contact-name" name="Name" type="text" required />
+            </div>
+
+            <div class="field-group">
+              <label for="contact-email">Email</label>
+              <input id="contact-email" name="Email" type="email" required />
+            </div>
+
+            
+	    <div class="field-group">
+  		<label>Do you currently have a waiver?</label>
+
+ 		 <label class="checkbox-row">
+    			<input id="has-waiver" type="checkbox" name="Waiver" />
+   			<span>Yes, I currently have a disability waiver in Minnesota.</span>
+ 		</label>
+		</div>
+
+            <div class="field-group">
+              <label for="contact-message">Questions or Requests</label>
+              <textarea id="contact-message" name="Message" rows="6" required></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </section>
+
+        <!-- REFERRAL FORM -->
+        <section class="contact-card">
+          <h3>Have a Referral for Us?</h3>
+          <p>Case managers, coordinators, and others can use this form to refer a participant for CDCS planning support.</p>
+
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="dc61e0b5-0ac1-4faa-9904-aebcfa4767b6" />
+            <input type="hidden" name="subject" value="New CDCS Referral Submission" />
+            <input type="checkbox" name="botcheck" style="display:none" />
+
+            <div class="field-group">
+              <label for="participant-name">Participant Name</label>
+              <input type="text" id="participant-name" name="Participant Name" required />
+            </div>
+
+            <div class="field-group">
+              <label for="legal-rep-name">Legal Representative Name</label>
+              <input type="text" id="legal-rep-name" name="Legal Representative Name" />
+            </div>
+
+            <div class="field-group">
+              <label for="participant-email">Participant/Representative Email</label>
+              <input type="email" id="participant-email" name="Participant/Representative Email" required />
+            </div>
+
+            <div class="field-group">
+              <label for="participant-phone">Participant/Representative Phone</label>
+              <input type="tel" id="participant-phone" name="Participant/Representative Phone" />
+            </div>
+
+            <div class="field-group">
+              <label for="preferred-contact">Preferred Method of Contact</label>
+              <select id="preferred-contact" name="Preferred Method of Contact" required>
+                <option value="">-- Please select --</option>
+                <option value="Phone">Phone</option>
+                <option value="Email">Email</option>
+                <option value="Text">Text</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="county">County (Minnesota)</label>
+              <select id="county" name="County" required>
+                <option value="">-- Please select --</option>
+                <option value="Aitkin">Aitkin</option>
+                <option value="Anoka">Anoka</option>
+                <option value="Becker">Becker</option>
+                <option value="Beltrami">Beltrami</option>
+                <option value="Benton">Benton</option>
+                <option value="Big Stone">Big Stone</option>
+                <option value="Blue Earth">Blue Earth</option>
+                <option value="Brown">Brown</option>
+                <option value="Carlton">Carlton</option>
+                <option value="Carver">Carver</option>
+                <option value="Cass">Cass</option>
+                <option value="Chippewa">Chippewa</option>
+                <option value="Chisago">Chisago</option>
+                <option value="Clay">Clay</option>
+                <option value="Clearwater">Clearwater</option>
+                <option value="Cook">Cook</option>
+                <option value="Cottonwood">Cottonwood</option>
+                <option value="Crow Wing">Crow Wing</option>
+                <option value="Dakota">Dakota</option>
+                <option value="Dodge">Dodge</option>
+                <option value="Douglas">Douglas</option>
+                <option value="Faribault">Faribault</option>
+                <option value="Fillmore">Fillmore</option>
+                <option value="Freeborn">Freeborn</option>
+                <option value="Goodhue">Goodhue</option>
+                <option value="Grant">Grant</option>
+                <option value="Hennepin">Hennepin</option>
+                <option value="Houston">Houston</option>
+                <option value="Hubbard">Hubbard</option>
+                <option value="Isanti">Isanti</option>
+                <option value="Itasca">Itasca</option>
+                <option value="Jackson">Jackson</option>
+                <option value="Kanabec">Kanabec</option>
+                <option value="Kandiyohi">Kandiyohi</option>
+                <option value="Kittson">Kittson</option>
+                <option value="Koochiching">Koochiching</option>
+                <option value="Lac qui Parle">Lac qui Parle</option>
+                <option value="Lake">Lake</option>
+                <option value="Lake of the Woods">Lake of the Woods</option>
+                <option value="Le Sueur">Le Sueur</option>
+                <option value="Lincoln">Lincoln</option>
+                <option value="Lyon">Lyon</option>
+                <option value="Mahnomen">Mahnomen</option>
+                <option value="Marshall">Marshall</option>
+                <option value="Martin">Martin</option>
+                <option value="McLeod">McLeod</option>
+                <option value="Meeker">Meeker</option>
+                <option value="Mille Lacs">Mille Lacs</option>
+                <option value="Morrison">Morrison</option>
+                <option value="Mower">Mower</option>
+                <option value="Murray">Murray</option>
+                <option value="Nicollet">Nicollet</option>
+                <option value="Nobles">Nobles</option>
+                <option value="Norman">Norman</option>
+                <option value="Olmsted">Olmsted</option>
+                <option value="Otter Tail">Otter Tail</option>
+                <option value="Pennington">Pennington</option>
+                <option value="Pine">Pine</option>
+                <option value="Pipestone">Pipestone</option>
+                <option value="Polk">Polk</option>
+                <option value="Pope">Pope</option>
+                <option value="Ramsey">Ramsey</option>
+                <option value="Red Lake">Red Lake</option>
+                <option value="Redwood">Redwood</option>
+                <option value="Renville">Renville</option>
+                <option value="Rice">Rice</option>
+                <option value="Rock">Rock</option>
+                <option value="Roseau">Roseau</option>
+                <option value="Scott">Scott</option>
+                <option value="Sherburne">Sherburne</option>
+                <option value="Sibley">Sibley</option>
+                <option value="St. Louis">St. Louis</option>
+                <option value="Stearns">Stearns</option>
+                <option value="Steele">Steele</option>
+                <option value="Stevens">Stevens</option>
+                <option value="Swift">Swift</option>
+                <option value="Todd">Todd</option>
+                <option value="Traverse">Traverse</option>
+                <option value="Wabasha">Wabasha</option>
+                <option value="Wadena">Wadena</option>
+                <option value="Waseca">Waseca</option>
+                <option value="Washington">Washington</option>
+                <option value="Watonwan">Watonwan</option>
+                <option value="Wilkin">Wilkin</option>
+                <option value="Winona">Winona</option>
+                <option value="Wright">Wright</option>
+                <option value="Yellow Medicine">Yellow Medicine</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="case-manager-email">Case Manager Email</label>
+              <input type="email" id="case-manager-email" name="Case Manager Email" />
+            </div>
+
+            <div class="field-group">
+              <label for="comments">Comment</label>
+              <textarea id="comments" name="Comment" rows="5"></textarea>
+            </div>
+
+            <button type="submit">Submit Referral</button>
+          </form>
+        </section>
+
+      </div>
+    </div>
+
+    <div class="info-panel">
+
+  <h3>How to Reach Us</h3>
+
+  <div class="contact-item">
+    <div class="contact-label">General Email</div>
+    <div class="contact-value">
+      <a href="mailto:info@northstarsupportco.com">
+        info@northstarsupportco.com
+      </a>
+    </div>
+  </div>
+
+  <div class="contact-item">
+    <div class="contact-label">Phone</div>
+    <div class="contact-value">
+      <a href="tel:0000000000">(000) 000-0000</a>
+    </div>
+  </div>
+
+  <div class="contact-item">
+    <div class="contact-label">Service Area</div>
+    <div class="contact-value">
+      Minnesota statewide, with county-specific planner coverage.
+    </div>
+  </div>
+
+  <div class="contact-item">
+    <div class="contact-label">Planner Emails</div>
+    <div class="contact-value">
+      <a href="mailto:crystal@northstarsupportco.com">crystal@northstarsupportco.com</a><br>
+      <a href="mailto:amanda@northstarsupportco.com">amanda@northstarsupportco.com</a><br>
+      <a href="mailto:rickie@northstarsupportco.com">rickie@northstarsupportco.com</a>
+    </div>
+  </div>
+
+</div>
+
+    <footer class="major container medium">
+      <h3>Want to Learn More About Our Team?</h3>
+      <p>Visit our About page to learn more about North Star Support Co. and meet the planners who support families across Minnesota.</p>
+      <ul class="actions special">
+        <li><a href="about.html" class="button">Meet Our Team</a></li>
+      </ul>
+    </footer>
+
+  </div>
+
+  <div id="footer">
+    <div class="container medium">
+      <ul class="copyright">
+        <li>&copy; North Star Support Co. All rights reserved.</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
