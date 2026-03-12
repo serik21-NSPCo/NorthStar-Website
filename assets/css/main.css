@@ -4132,3 +4132,32 @@ select {
 .field-group {
 	margin-bottom: 1.5em;
 }
+/* ==========================================
+   Form label polish
+   ========================================== */
+
+.field-group label {
+
+	color: var(--ns-navy);
+	font-size: 0.82em;
+	font-weight: 700;
+
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+
+	margin-bottom: 0.45em;
+	display: block;
+}
+
+/* Improve spacing between fields */
+
+.field-group {
+	margin-bottom: 1.6em;
+}
+
+/* Better placeholder styling */
+
+::placeholder {
+	color: rgba(0, 36, 93, 0.4);
+	font-weight: 400;
+}
