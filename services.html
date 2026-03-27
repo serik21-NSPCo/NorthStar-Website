@@ -22,7 +22,7 @@
   <meta name="twitter:image" content="https://northstarsupportco.com/images/logo.png" />
 
   <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
 
   <style>
     :root {
@@ -79,4 +79,254 @@
       justify-content: center;
       align-items: center;
       gap: 2em;
+      flex-wrap: wrap;
+    }
+
+    #nav li {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    #nav a {
+      text-decoration: none;
+      color: var(--ns-navy) !important;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.95em;
+      border-bottom: dotted 1px rgba(0, 36, 93, 0.25);
+    }
+
+    #nav a:hover {
+      color: var(--ns-green) !important;
+      border-bottom-color: rgba(106, 174, 0, 0.5);
+    }
+
+    #header {
+      background: linear-gradient(135deg, var(--ns-navy) 0%, var(--ns-light-blue) 100%) !important;
+      color: #ffffff !important;
+      text-align: center;
+      padding: 6em 2em 5em 2em;
+    }
+
+    #header h1,
+    #header p {
+      color: #ffffff !important;
+    }
+
+    .logo-image {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 1.5em auto;
+    }
+
+    h2, h3 {
+      color: var(--ns-navy) !important;
+    }
+
+    .button,
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    button {
+      background-color: var(--ns-navy) !important;
+      box-shadow: inset 0 0 0 2px var(--ns-navy) !important;
+      color: #ffffff !important;
+      border-radius: 0.4em;
+    }
+
+    .button:hover,
+    input[type="submit"]:hover,
+    input[type="reset"]:hover,
+    input[type="button"]:hover,
+    button:hover {
+      background-color: var(--ns-green) !important;
+      box-shadow: inset 0 0 0 2px var(--ns-green) !important;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5em;
+      margin-top: 2em;
+    }
+
+    .service-card,
+    .info-card {
+      background: #ffffff;
+      border: 1px solid var(--ns-border);
+      border-radius: 0.9em;
+      padding: 1.75em;
+      box-shadow: var(--ns-shadow);
+    }
+
+    .highlight-band {
+      background: var(--ns-soft);
+      border-left: 5px solid var(--ns-green);
+      padding: 2em;
+      border-radius: 0.75em;
+      margin: 1.5em 0;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2em;
+      align-items: start;
+    }
+
+    .check-list {
+      padding-left: 1.2em;
+      margin: 0;
+    }
+
+    .check-list li {
+      margin-bottom: 0.85em;
+    }
+
+    @media screen and (max-width: 980px) {
+      .service-grid,
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media screen and (max-width: 736px) {
+      #header {
+        padding: 4.5em 1.5em 4em 1.5em;
+      }
+
+      #nav ul {
+        gap: 1em;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "CDCS Support Planning Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "North Star Support Co.",
+      "url": "https://northstarsupportco.com"
+    },
+    "areaServed": "Minnesota",
+    "serviceType": "CDCS support planning",
+    "description": "North Star Support Co. provides CDCS support planning and waiver planning guidance for individuals and families across Minnesota."
+  }
+  </script>
+</head>
+<body class="is-preload">
+
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div id="header">
+    <img src="images/logo.png" alt="North Star Support Co. logo" class="logo-image" />
+    <h1>CDCS Support Planning Services in Minnesota</h1>
+    <p>North Star Support Co. helps individuals and families navigate CDCS support planning and waiver services with thoughtful guidance, responsive communication, and person-centered care.</p>
+  </div>
+
+  <div id="main">
+
+    <header class="major container medium">
+      <h2>Support Planning That Feels Clear, Respectful, and Dependable</h2>
+      <p>We understand that CDCS support planning can feel overwhelming. Our role is to make the process easier to understand while creating support plans that reflect the individual’s needs, goals, and services.</p>
+    </header>
+
+    <div class="box container">
+      <section class="highlight-band">
+        <h3>What We Help With</h3>
+        <p>North Star Support Co. provides Minnesota CDCS support planning services for individuals and families who need accurate, person-centered waiver planning support. We also work with case managers, referral partners, and other professionals who want a dependable support planning resource.</p>
+      </section>
+    </div>
+
+    <div class="box container">
+      <div class="service-grid">
+        <article class="service-card">
+          <h3>CDCS Support Planning</h3>
+          <p>We prepare thoughtful support plans that reflect the individual’s goals, services, and support needs while helping families feel more confident throughout the process.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>Waiver Planning Guidance</h3>
+          <p>We help families and partners better understand the waiver planning process, what information is needed, and how to move forward in a clear and organized way.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>County-Based Planner Matching</h3>
+          <p>We match participants with the right planner based on county coverage so each family is connected with someone who can best support their situation.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="box container">
+      <div class="two-col">
+        <section class="info-card">
+          <h3>Who We Work With</h3>
+          <ul class="check-list">
+            <li>Individuals receiving Minnesota waiver services</li>
+            <li>Families navigating CDCS planning for the first time</li>
+            <li>Case managers and referral partners</li>
+            <li>Professionals looking for a responsive planning resource</li>
+          </ul>
+        </section>
+
+        <section class="info-card">
+          <h3>Why Families Choose Us</h3>
+          <ul class="check-list">
+            <li>Warm, person-centered communication</li>
+            <li>Strong understanding of support planning requirements</li>
+            <li>Dependable follow-through and responsiveness</li>
+            <li>Experienced planners serving counties across Minnesota</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <div class="box container">
+      <section class="info-card">
+        <h3>Our Approach to Minnesota Support Planning</h3>
+        <p>We believe support planning should be more than paperwork. It should reflect the individual behind the plan. That means listening well, communicating clearly, and preparing thoughtful documentation that supports both compliance and person-centered services.</p>
+        <p>Whether someone is just getting started or has gone through the process before, our goal is to make CDCS support planning in Minnesota feel more manageable and more supportive from beginning to end.</p>
+      </section>
+    </div>
+
+    <footer class="major container medium">
+      <h3>Need help finding the right planner?</h3>
+      <p>Contact North Star Support Co. to ask questions, submit a referral, or connect with the right planner for your county.</p>
+      <ul class="actions special">
+        <li><a href="contact.html" class="button">Contact Us</a></li>
+        <li><a href="about.html" class="button alt">Meet Our Team</a></li>
+      </ul>
+    </footer>
+
+  </div>
+
+  <div id="footer">
+    <div class="container medium">
+      <ul class="copyright">
+        <li>&copy; North Star Support Co. All rights reserved.</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/browser.min.js"></script>
+  <script src="/assets/js/breakpoints.min.js"></script>
+  <script src="/assets/js/util.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
 </html>
