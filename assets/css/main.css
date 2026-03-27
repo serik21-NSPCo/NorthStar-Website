@@ -33,6 +33,118 @@ body {
 	line-height: 1;
 }
 
+/* =========================
+   Quarterly Giving Section
+========================= */
+
+.donation-section {
+  padding: 0.5em 0 1em 0;
+}
+
+.donation-section-header {
+  max-width: 760px;
+  margin: 0 auto 2em auto;
+  text-align: center;
+}
+
+.donation-section-header h3 {
+  margin-bottom: 0.5em;
+}
+
+.donation-section-header p {
+  margin: 0 auto;
+}
+
+.donation-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5em;
+  margin-top: 2em;
+}
+
+.donation-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(0, 36, 93, 0.12);
+  border-radius: 1em;
+  box-shadow: 0 0.65em 1.5em rgba(11, 31, 68, 0.08);
+  overflow: hidden;
+}
+
+.donation-card-link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.5em 1.25em 1.35em 1.25em;
+}
+
+.quarter-badge {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  display: inline-block;
+  background: #6aae00;
+  color: #ffffff;
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 0.65em 0.8em;
+  border-radius: 999px;
+}
+
+.donation-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 110px;
+  margin-bottom: 1em;
+  padding-top: 0.5em;
+}
+
+.donation-logo-wrap img {
+  max-width: 100%;
+  max-height: 72px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.donation-card-body {
+  text-align: center;
+}
+
+.donation-card-body h4 {
+  margin: 0 0 0.45em 0;
+  color: #00245d;
+  font-size: 1.05em;
+  line-height: 1.35em;
+}
+
+.donation-card-body p {
+  margin: 0;
+  color: #5b6472;
+  font-size: 0.95em;
+  line-height: 1.6em;
+}
+
+@media screen and (max-width: 980px) {
+  .donation-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .donation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-card-link {
+    padding: 1.35em 1.1em 1.2em 1.1em;
+  }
+}
 ol, ul {
 	list-style: none;
 }
