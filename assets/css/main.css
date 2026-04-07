@@ -4646,3 +4646,22 @@ body:not(.is-preload) {
     max-width: 100%;
   }
 }
+
+/* Global left accent line for all cards */
+.content-card,
+.testimonial-card,
+.cta-card,
+.profile-card {
+  border-left: 5px solid var(--ns-green);
+}
+
+/* Center major section titles */
+.testimonial-wrap > header h2,
+.testimonial-wrap > header p {
+  text-align: center;
+
+.content-card h2,
+.cta-card h3 {
+  text-align: center;
+}
+}
