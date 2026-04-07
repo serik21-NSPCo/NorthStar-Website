@@ -4633,4 +4633,33 @@ select {
   padding: 1.5em 4.75em;
 }
 
+.planner-lightbox-close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  z-index: 3;
+
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(0, 36, 93, 0.85);
+  color: #ffffff;
+
+  font-size: 1.6em;
+  line-height: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.planner-lightbox-close:hover {
+  background: #6aae00;
+}
+
 </style>
