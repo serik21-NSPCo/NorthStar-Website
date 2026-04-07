@@ -4,18 +4,18 @@
   <title>Crystal | North Star Support Co.</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <meta name="description" content="Learn more about Planner Name at North Star Support Co., including professional background, family-centered values, and testimonials from the people they support." />
-  <meta name="keywords" content="CDCS support planning Minnesota, support planner Minnesota, waiver support planning, North Star Support Co., Planner Name" />
+  <meta name="description" content="Learn more about Crystal at North Star Support Co., including her professional background, family-centered approach, and testimonials from the families she supports." />
+  <meta name="keywords" content="Crystal North Star Support Co, CDCS support planning Minnesota, support planner Minnesota, waiver support planning" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Planner Name | North Star Support Co." />
-  <meta property="og:description" content="Meet Planner Name from North Star Support Co. and learn more about their background, approach, and experience in Minnesota CDCS support planning." />
+  <meta property="og:title" content="Crystal | North Star Support Co." />
+  <meta property="og:description" content="Meet Crystal from North Star Support Co. and learn more about her background, approach, and experience in Minnesota CDCS support planning." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://northstarsupportco.com/planner-name.html" />
-  <meta property="og:image" content="https://northstarsupportco.com/images/planner-name-hero.jpg" />
+  <meta property="og:url" content="https://northstarsupportco.com/crystal.html" />
+  <meta property="og:image" content="https://northstarsupportco.com/images/crystal-1.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href="https://northstarsupportco.com/planner-name.html" />
-  <link rel="icon" type="image/png" href="images/favicon.png" />
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="canonical" href="https://northstarsupportco.com/crystal.html" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
 
   <style>
     :root {
@@ -115,7 +115,7 @@
       color: #ffffff !important;
       text-align: center;
       padding: 5em 2em 4em 2em;
-      min-height: 360px;
+      min-height: 320px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -194,35 +194,6 @@
       margin: 1.5em 0;
     }
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.25em;
-      margin-top: 2em;
-    }
-
-    .gallery-card {
-      background: #ffffff;
-      border: 1px solid var(--ns-border);
-      border-radius: 0.9em;
-      overflow: hidden;
-      box-shadow: var(--ns-shadow);
-    }
-
-    .gallery-card img {
-      display: block;
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-    }
-
-    .gallery-card .caption {
-      padding: 0.9em 1em;
-      font-size: 0.95em;
-      color: #5b6472;
-      text-align: center;
-    }
-
     .bio-layout {
       display: grid;
       grid-template-columns: 320px 1fr;
@@ -277,6 +248,226 @@
     .cta-card h3 {
       text-align: left;
       margin-bottom: 0.75em;
+    }
+
+    .planner-photo-gallery {
+      width: 100%;
+      max-width: 100%;
+      margin: 1.5em auto 2.25em auto;
+    }
+
+    .planner-photo-title {
+      text-align: center;
+      margin: 0 0 1.25em 0;
+      color: #7a7a7a !important;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .planner-slider {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .planner-slider-main-wrap {
+      position: relative;
+      width: 100%;
+    }
+
+    .planner-slider-main {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 1em;
+      background: #ffffff;
+      border: 1px solid rgba(0, 36, 93, 0.12);
+      box-shadow: 0 0.65em 1.5em rgba(11, 31, 68, 0.08);
+    }
+
+    .planner-slide {
+      display: none;
+    }
+
+    .planner-slide.active {
+      display: block;
+      animation: plannerFadeIn 0.45s ease;
+    }
+
+    .planner-slide-open {
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      border: none;
+      background: transparent;
+      cursor: zoom-in;
+    }
+
+    .planner-slide img {
+      display: block;
+      width: 100%;
+      height: 620px;
+      object-fit: contain;
+      background: #f7f8fa;
+    }
+
+    .planner-slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 3;
+      width: 52px;
+      height: 52px;
+      border: none;
+      border-radius: 999px;
+      background: rgba(0, 36, 93, 0.9);
+      color: #ffffff;
+      font-size: 1.4em;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0.45em 1em rgba(11, 31, 68, 0.18);
+    }
+
+    .planner-slider-prev {
+      left: 1em;
+    }
+
+    .planner-slider-next {
+      right: 1em;
+    }
+
+    .planner-slider-thumbs {
+      display: grid;
+      grid-template-columns: repeat(11, minmax(0, 1fr));
+      gap: 0.65em;
+      margin-top: 1em;
+      width: 100%;
+    }
+
+    .planner-thumb {
+      border: 2px solid rgba(0, 36, 93, 0.12);
+      border-radius: 0.75em;
+      padding: 0;
+      overflow: hidden;
+      background: #ffffff;
+      cursor: pointer;
+    }
+
+    .planner-thumb.active {
+      border-color: #6aae00;
+    }
+
+    .planner-thumb img {
+      display: block;
+      width: 100%;
+      height: 72px;
+      object-fit: cover;
+    }
+
+    .planner-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: none;
+    }
+
+    .planner-lightbox.is-open {
+      display: block;
+    }
+
+    .planner-lightbox-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(8, 18, 40, 0.82);
+      backdrop-filter: blur(4px);
+    }
+
+    .planner-lightbox-dialog {
+      position: relative;
+      z-index: 2;
+      width: min(92vw, 1280px);
+      height: min(88vh, 900px);
+      margin: 4vh auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .planner-lightbox-image-wrap {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5em 4.75em;
+    }
+
+    .planner-lightbox-image-wrap img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 0.85em;
+      box-shadow: 0 0.8em 2em rgba(0, 0, 0, 0.28);
+      background: #ffffff;
+    }
+
+    .planner-lightbox-close {
+      position: absolute;
+      top: 0.25em;
+      right: 0.25em;
+      z-index: 3;
+      width: 52px;
+      height: 52px;
+      border: none;
+      border-radius: 999px;
+      background: rgba(0, 36, 93, 0.92);
+      color: #ffffff;
+      font-size: 2em;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .planner-lightbox-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 3;
+      width: 54px;
+      height: 54px;
+      border: none;
+      border-radius: 999px;
+      background: rgba(0, 36, 93, 0.92);
+      color: #ffffff;
+      font-size: 1.45em;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .planner-lightbox-prev {
+      left: 0.5em;
+    }
+
+    .planner-lightbox-next {
+      right: 0.5em;
+    }
+
+    .planner-lightbox-close:hover,
+    .planner-lightbox-arrow:hover,
+    .planner-slider-arrow:hover {
+      background: rgba(106, 174, 0, 0.96);
+    }
+
+    body.lightbox-open {
+      overflow: hidden;
     }
 
     .testimonial-wrap {
@@ -356,13 +547,28 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    @media screen and (max-width: 980px) {
-      .gallery-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+    @keyframes plannerFadeIn {
+      from { opacity: 0; transform: scale(1.01); }
+      to { opacity: 1; transform: scale(1); }
+    }
 
+    @media screen and (max-width: 1100px) {
+      .planner-slider-thumbs {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+      }
+    }
+
+    @media screen and (max-width: 980px) {
       .bio-layout {
         grid-template-columns: 1fr;
+      }
+
+      .planner-slide img {
+        height: 420px;
+      }
+
+      .planner-slider-thumbs {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
       }
     }
 
@@ -376,12 +582,43 @@
         gap: 1em;
       }
 
-      .gallery-grid {
-        grid-template-columns: 1fr;
+      .planner-slide img {
+        height: 300px;
       }
 
-      .gallery-card img {
-        height: 240px;
+      .planner-slider-arrow,
+      .planner-lightbox-arrow,
+      .planner-lightbox-close {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1em;
+      }
+
+      .planner-slider-prev {
+        left: 0.65em;
+      }
+
+      .planner-slider-next {
+        right: 0.65em;
+      }
+
+      .planner-slider-thumbs {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.65em;
+      }
+
+      .planner-thumb img {
+        height: 64px;
+      }
+
+      .planner-lightbox-dialog {
+        width: 96vw;
+        height: 86vh;
+        margin: 5vh auto;
+      }
+
+      .planner-lightbox-image-wrap {
+        padding: 1.25em 3.5em;
       }
     }
   </style>
@@ -392,15 +629,15 @@
     "@type": "ProfilePage",
     "mainEntity": {
       "@type": "Person",
-      "name": "Planner Name",
-      "jobTitle": "Planner Title",
+      "name": "Crystal",
+      "jobTitle": "Owner / Planner",
       "worksFor": {
         "@type": "Organization",
         "name": "North Star Support Co.",
         "url": "https://northstarsupportco.com"
       },
-      "description": "Short professional summary for Planner Name.",
-      "image": "https://northstarsupportco.com/images/planner-name-hero.jpg"
+      "description": "Crystal is the owner of North Star Support Co. and brings broad experience across social services and CDCS support planning.",
+      "image": "https://northstarsupportco.com/images/crystal-1.jpg"
     }
   }
   </script>
@@ -411,12 +648,14 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
   <div id="header">
     <img src="images/logo.png" alt="North Star Support Co. logo" class="logo-image" />
+    <h1>Crystal</h1>
     <p>Warm, family-centered CDCS support planning with experience, advocacy, and thoughtful guidance for families across Minnesota.</p>
     <ul class="actions special">
       <li><a href="contact.html" class="button">Contact Our Team</a></li>
@@ -428,379 +667,78 @@
 
     <header class="major container medium">
       <h2>Meet Crystal</h2>
-      <p>Crystal is the owner of NSSC. She brings knowledge and experience from several key roles in Social Services.  She is a leading expert in CDCS and has helped pass legislation to make it easier for families to access services across all MN counties.</p>
+      <p>Crystal is the owner of NSSC. She brings knowledge and experience from several key roles in social services. She is a leading expert in CDCS and has helped pass legislation to make it easier for families to access services across all Minnesota counties.</p>
     </header>
 
     <section class="planner-photo-gallery">
+      <h2 class="planner-photo-title">The Planner Behind the Role</h2>
 
-  <div class="planner-slider" data-slider>
-    <div class="planner-slider-main-wrap">
-      <button class="planner-slider-arrow planner-slider-prev" type="button" aria-label="Previous photo" data-prev>
-        &#10094;
-      </button>
+      <div class="planner-slider" data-slider>
+        <div class="planner-slider-main-wrap">
+          <button class="planner-slider-arrow planner-slider-prev" type="button" aria-label="Previous photo" data-prev>
+            &#10094;
+          </button>
 
-      <div class="planner-slide active" data-slide>
-  <button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-1.jpg" data-lightbox-alt="Crystal photo 1">
-    <img src="images/crystal-1.jpg" alt="Crystal photo 1" />
-  </button>
-</div>
+          <div class="planner-slider-main">
+            <div class="planner-slide active" data-slide><button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-1.jpg" data-lightbox-alt="Crystal photo 1"><img src="images/crystal-1.jpg" alt="Crystal photo 1" /></button></div>
+            <div class="planner-slide" data-slide><button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-2.jpg" data-lightbox-alt="Crystal photo 2"><img src="images/crystal-2.jpg" alt="Crystal photo 2" /></button></div>
+            <div class="planner-slide" data-slide><button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-3.jpg" data-lightbox-alt="Crystal photo 3"><img src="images/crystal-3.jpg" alt="Crystal photo 3" /></button></div>
+            <div class="planner-slide" data-slide><button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-4.jpg" data-lightbox-alt="Crystal photo 4"><img src="images/crystal-4.jpg" alt="Crystal photo 4" /></button></div>
+            <div class="planner-slide" data-slide><button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-5.jpg" data-lightbox-alt="Crystal photo 5"><img src="images/crystal-5.jpg" alt="Crystal photo 5" /></button></div>
+            <div class="planner-slide" data-slide><button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-6.jpg" data-lightbox-alt="Crystal photo 6"><img src="images/crystal-6.jpg" alt="Crystal photo 6" /></button></div>
+            <div class="planner-slide" data-slide><button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-7.jpg" data-lightbox-alt="Crystal photo 7"><img src="images/crystal-7.jpg" alt="Crystal photo 7" /></button></div>
+            <div class="planner-slide" data-slide><button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-8.jpg" data-lightbox-alt="Crystal photo 8"><img src="images/crystal-8.jpg" alt="Crystal photo 8" /></button></div>
+            <div class="planner-slide" data-slide><button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-9.jpg" data-lightbox-alt="Crystal photo 9"><img src="images/crystal-9.jpg" alt="Crystal photo 9" /></button></div>
+            <div class="planner-slide" data-slide><button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-10.jpg" data-lightbox-alt="Crystal photo 10"><img src="images/crystal-10.jpg" alt="Crystal photo 10" /></button></div>
+            <div class="planner-slide" data-slide><button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-11.jpg" data-lightbox-alt="Crystal photo 11"><img src="images/crystal-11.jpg" alt="Crystal photo 11" /></button></div>
+          </div>
 
-<div class="planner-slide" data-slide>
-  <button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-2.jpg" data-lightbox-alt="Crystal photo 2">
-    <img src="images/crystal-2.jpg" alt="Crystal photo 2" />
-  </button>
-</div>
+          <button class="planner-slider-arrow planner-slider-next" type="button" aria-label="Next photo" data-next>
+            &#10095;
+          </button>
+        </div>
 
-<div class="planner-slide" data-slide>
-  <button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-3.jpg" data-lightbox-alt="Crystal photo 3">
-    <img src="images/crystal-3.jpg" alt="Crystal photo 3" />
-  </button>
-</div>
-
-<div class="planner-slide" data-slide>
-  <button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-4.jpg" data-lightbox-alt="Crystal photo 4">
-    <img src="images/crystal-4.jpg" alt="Crystal photo 4" />
-  </button>
-</div>
-
-<div class="planner-slide" data-slide>
-  <button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-5.jpg" data-lightbox-alt="Crystal photo 5">
-    <img src="images/crystal-5.jpg" alt="Crystal photo 5" />
-  </button>
-</div>
-
-<div class="planner-slide" data-slide>
-  <button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-6.jpg" data-lightbox-alt="Crystal photo 6">
-    <img src="images/crystal-6.jpg" alt="Crystal photo 6" />
-  </button>
-</div>
-
-<div class="planner-slide" data-slide>
-  <button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-7.jpg" data-lightbox-alt="Crystal photo 7">
-    <img src="images/crystal-7.jpg" alt="Crystal photo 7" />
-  </button>
-</div>
-
-<div class="planner-slide" data-slide>
-  <button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-8.jpg" data-lightbox-alt="Crystal photo 8">
-    <img src="images/crystal-8.jpg" alt="Crystal photo 8" />
-  </button>
-
-<div class="planner-slide" data-slide>
-  <button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-7.jpg" data-lightbox-alt="Crystal photo 7">
-    <img src="images/crystal-9.jpg" alt="Crystal photo 9" />
-  </button>
-
-<div class="planner-slide" data-slide>
-  <button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-7.jpg" data-lightbox-alt="Crystal photo 7">
-    <img src="images/crystal-10.jpg" alt="Crystal photo 10" />
-  </button>
-
-<div class="planner-slide" data-slide>
-  <button class="planner-slide-open" type="button" data-open-lightbox="images/crystal-7.jpg" data-lightbox-alt="Crystal photo 7">
-    <img src="images/crystal-11.jpg" alt="Crystal photo 11" />
-  </button>
-</div>
-      
-
-      <button class="planner-slider-arrow planner-slider-next" type="button" aria-label="Next photo" data-next>
-        &#10095;
-      </button>
-    </div>
-
-    <div class="planner-slider-thumbs">
-      <button class="planner-thumb active" type="button" aria-label="Show photo 1" data-thumb>
-        <img src="images/crystal-1.jpg" alt="Crystal thumbnail 1" />
-      </button>
-      <button class="planner-thumb" type="button" aria-label="Show photo 2" data-thumb>
-        <img src="images/crystal-2.jpg" alt="Crystal thumbnail 2" />
-      </button>
-      <button class="planner-thumb" type="button" aria-label="Show photo 3" data-thumb>
-        <img src="images/crystal-3.jpg" alt="Crystal thumbnail 3" />
-      </button>
-      <button class="planner-thumb" type="button" aria-label="Show photo 4" data-thumb>
-        <img src="images/crystal-4.jpg" alt="Crystal thumbnail 4" />
-      </button>
-      <button class="planner-thumb" type="button" aria-label="Show photo 5" data-thumb>
-        <img src="images/crystal-5.jpg" alt="Crystal thumbnail 5" />
-      </button>
-      <button class="planner-thumb" type="button" aria-label="Show photo 6" data-thumb>
-        <img src="images/crystal-6.jpg" alt="Crystal thumbnail 6" />
-      </button>
-      <button class="planner-thumb" type="button" aria-label="Show photo 7" data-thumb>
-        <img src="images/crystal-7.jpg" alt="Crystal thumbnail 7" />
-      </button>
-      <button class="planner-thumb" type="button" aria-label="Show photo 8" data-thumb>
-        <img src="images/crystal-8.jpg" alt="Crystal thumbnail 8" />
-      </button>
-    </div>
-  </div>
-</section>
-<!-- =========================
-     CSS FOR MAIN.CSS
-     Paste this at the bottom of assets/css/main.css
-========================= -->
-<style>
-.planner-photo-gallery-section {
-  margin: 0;
-}
-
-.planner-slider {
-  max-width: 980px;
-  margin: 0 auto;
-}
-
-.planner-slider-main-wrap {
-  position: relative;
-}
-
-.planner-slider-main {
-  position: relative;
-  overflow: hidden;
-  border-radius: 1em;
-  background: #ffffff;
-  border: 1px solid rgba(0, 36, 93, 0.12);
-  box-shadow: 0 0.65em 1.5em rgba(11, 31, 68, 0.08);
-}
-
-.planner-slide {
-  display: none;
-}
-
-.planner-slide.active {
-  display: block;
-  animation: plannerFadeIn 0.45s ease;
-}
-
-.planner-slide img {
-  display: block;
-  width: 100%;
-  height: 520px;
-  object-fit: cover;
-}
-
-.planner-slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 3;
-  width: 52px;
-  height: 52px;
-  border: none;
-  border-radius: 999px;
-  background: rgba(0, 36, 93, 0.82);
-  color: #ffffff;
-  font-size: 1.4em;
-  line-height: 1;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0.45em 1em rgba(11, 31, 68, 0.18);
-}
-
-.planner-slider-prev {
-  left: 1em;
-}
-
-.planner-slider-next {
-  right: 1em;
-}
-
-.planner-slider-arrow:hover {
-  background: rgba(106, 174, 0, 0.92);
-}
-
-.planner-slider-thumbs {
-  display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
-  gap: 0.85em;
-  margin-top: 1.15em;
-}
-
-.planner-thumb {
-  border: 2px solid rgba(0, 36, 93, 0.12);
-  border-radius: 0.75em;
-  padding: 0;
-  overflow: hidden;
-  background: #ffffff;
-  cursor: pointer;
-  box-shadow: 0 0.35em 0.9em rgba(11, 31, 68, 0.06);
-}
-
-.planner-thumb.active {
-  border-color: #6aae00;
-  box-shadow: 0 0.45em 1em rgba(106, 174, 0, 0.16);
-}
-
-.planner-thumb img {
-  display: block;
-  width: 100%;
-  height: 78px;
-  object-fit: cover;
-}
-
-@keyframes plannerFadeIn {
-  from {
-    opacity: 0;
-    transform: scale(1.01);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@media screen and (max-width: 980px) {
-  .planner-slider-thumbs {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .planner-slide img {
-    height: 420px;
-  }
-}
-
-@media screen and (max-width: 736px) {
-  .planner-slide img {
-    height: 300px;
-  }
-
-  .planner-slider-arrow {
-    width: 44px;
-    height: 44px;
-    font-size: 1.1em;
-  }
-
-  .planner-slider-prev {
-    left: 0.65em;
-  }
-
-  .planner-slider-next {
-    right: 0.65em;
-  }
-
-  .planner-slider-thumbs {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.65em;
-  }
-
-  .planner-thumb img {
-    height: 68px;
-  }
-}
-</style>
-
-<!-- =========================
-     JS FOR THE PAGE
-     Paste this near the bottom of the planner bio page, just before </body>
-========================= -->
-<script>
-(function () {
-  const slider = document.querySelector('[data-slider]');
-  if (!slider) return;
-
-  const slides = Array.from(slider.querySelectorAll('[data-slide]'));
-  const thumbs = Array.from(slider.querySelectorAll('[data-thumb]'));
-  const prevBtn = slider.querySelector('[data-prev]');
-  const nextBtn = slider.querySelector('[data-next]');
-
-  let currentIndex = 0;
-  let autoRotate = null;
-  const rotationDelay = 5000;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
-    });
-
-    thumbs.forEach((thumb, i) => {
-      thumb.classList.toggle('active', i === index);
-    });
-
-    currentIndex = index;
-  }
-
-  function nextSlide() {
-    const nextIndex = (currentIndex + 1) % slides.length;
-    showSlide(nextIndex);
-  }
-
-  function prevSlide() {
-    const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-    showSlide(prevIndex);
-  }
-
-  function startAutoRotate() {
-    stopAutoRotate();
-    autoRotate = window.setInterval(nextSlide, rotationDelay);
-  }
-
-  function stopAutoRotate() {
-    if (autoRotate) {
-      window.clearInterval(autoRotate);
-      autoRotate = null;
-    }
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener('click', function () {
-      prevSlide();
-      startAutoRotate();
-    });
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', function () {
-      nextSlide();
-      startAutoRotate();
-    });
-  }
-
-  thumbs.forEach((thumb, index) => {
-    thumb.addEventListener('click', function () {
-      showSlide(index);
-      startAutoRotate();
-    });
-  });
-
-  slider.addEventListener('mouseenter', stopAutoRotate);
-  slider.addEventListener('mouseleave', startAutoRotate);
-
-  showSlide(0);
-  startAutoRotate();
-})();
-</script>
-
+        <div class="planner-slider-thumbs">
+          <button class="planner-thumb active" type="button" aria-label="Show photo 1" data-thumb><img src="images/crystal-1.jpg" alt="Crystal thumbnail 1" /></button>
+          <button class="planner-thumb" type="button" aria-label="Show photo 2" data-thumb><img src="images/crystal-2.jpg" alt="Crystal thumbnail 2" /></button>
+          <button class="planner-thumb" type="button" aria-label="Show photo 3" data-thumb><img src="images/crystal-3.jpg" alt="Crystal thumbnail 3" /></button>
+          <button class="planner-thumb" type="button" aria-label="Show photo 4" data-thumb><img src="images/crystal-4.jpg" alt="Crystal thumbnail 4" /></button>
+          <button class="planner-thumb" type="button" aria-label="Show photo 5" data-thumb><img src="images/crystal-5.jpg" alt="Crystal thumbnail 5" /></button>
+          <button class="planner-thumb" type="button" aria-label="Show photo 6" data-thumb><img src="images/crystal-6.jpg" alt="Crystal thumbnail 6" /></button>
+          <button class="planner-thumb" type="button" aria-label="Show photo 7" data-thumb><img src="images/crystal-7.jpg" alt="Crystal thumbnail 7" /></button>
+          <button class="planner-thumb" type="button" aria-label="Show photo 8" data-thumb><img src="images/crystal-8.jpg" alt="Crystal thumbnail 8" /></button>
+          <button class="planner-thumb" type="button" aria-label="Show photo 9" data-thumb><img src="images/crystal-9.jpg" alt="Crystal thumbnail 9" /></button>
+          <button class="planner-thumb" type="button" aria-label="Show photo 10" data-thumb><img src="images/crystal-10.jpg" alt="Crystal thumbnail 10" /></button>
+          <button class="planner-thumb" type="button" aria-label="Show photo 11" data-thumb><img src="images/crystal-11.jpg" alt="Crystal thumbnail 11" /></button>
+        </div>
+      </div>
+    </section>
 
     <div class="box container">
       <div class="bio-layout">
 
         <aside class="profile-card">
-          <img src="images/planner-name-headshot.jpg" alt="Planner Name headshot" />
-          <h3>Planner Name</h3>
-          <p class="profile-role">Planner Title</p>
-          <p>Short warm introduction. This is a good spot for one paragraph that quickly explains who this planner is and why families enjoy working with them.</p>
+          <img src="images/crystal.png" alt="Crystal headshot" />
+          <h3>Crystal</h3>
+          <p class="profile-role">Owner / Planner</p>
+          <p>Crystal brings broad experience, strong advocacy, and a warm, family-centered approach to CDCS support planning throughout Minnesota.</p>
 
           <ul class="profile-list">
-            <li><strong>Email:</strong> <a href="mailto:planner@northstarsupportco.com">planner@northstarsupportco.com</a></li>
-            <li><strong>Phone:</strong> (000) 000-0000</li>
-            <li><strong>County coverage:</strong> Add coverage details here.</li>
-            <li><strong>Specialties:</strong> Add 2–3 specialties here.</li>
+            <li><strong>Email:</strong> <a href="mailto:crystal@northstarsupportco.com">crystal@northstarsupportco.com</a></li>
+            <li><strong>County coverage:</strong> All Minnesota counties except <b>Dakota</b>.</li>
+            <li><strong>Specialties:</strong> CDCS planning, systems navigation, advocacy, and family-centered planning.</li>
           </ul>
         </aside>
 
         <section class="content-card">
           <h2>Professional Bio</h2>
-          <p>Start with a strong overview paragraph that explains the planner’s background, experience, and approach. This should sound professional, warm, and easy for families to connect with.</p>
-          <p>Add a second paragraph describing relevant experience in human services, assessments, case management, advocacy, direct care, county work, or support planning.</p>
-          <p>Add a third paragraph that feels more personal and family-centered. This is a good place to talk about values, approach, why they enjoy this work, and what clients can expect when working with them.</p>
+          <p>Crystal has built her career around helping families navigate services with confidence, clarity, and meaningful support. Her work reflects deep knowledge of CDCS planning and a strong commitment to making the process feel more understandable and manageable for the families she serves.</p>
+          <p>She brings knowledge and experience from several key roles in social services, giving her a broad systems-level perspective that helps her communicate effectively, solve problems thoughtfully, and advocate well for participants across Minnesota.</p>
+          <p>Crystal is known for being responsive, supportive, and highly dependable. Families value not only her expertise, but also the calm, caring, and practical way she approaches each relationship and each support plan.</p>
 
           <div class="soft-card">
-            <h3>Suggested Bio Structure</h3>
-            <p><strong>Paragraph 1:</strong> role, years of experience, and overall background.</p>
-            <p><strong>Paragraph 2:</strong> work history, expertise, certifications, county knowledge, or advocacy work.</p>
-            <p><strong>Paragraph 3:</strong> personal approach, family-centered values, and what makes them a trusted fit for clients.</p>
+            <h3>Why Families Value Working With Crystal</h3>
+            <p>Crystal combines strong technical knowledge with warm communication, thoughtful follow-through, and a genuine commitment to helping families feel supported in a system that can often feel overwhelming.</p>
           </div>
         </section>
 
@@ -810,7 +748,7 @@
     <div class="box container testimonial-wrap">
       <header>
         <h2>Kind Words from Families and Partners</h2>
-        <p>This section is set up to rotate testimonials automatically. Replace the placeholder quotes with real feedback from clients, families, or referral partners.</p>
+        <p>Families consistently describe Crystal as knowledgeable, responsive, compassionate, and an invaluable part of their support team.</p>
       </header>
 
       <div class="testimonial-viewport" id="testimonialViewport">
@@ -820,34 +758,22 @@
         </article>
 
         <article class="testimonial-card">
-          <div class="testimonial-quote">“I have had the pleasure of working off &amp; on with Crystal for years! One of the best,
-empathetic, knowledgeable, supportive support planner I have ever worked with. She is
-responsive and cares a lot for the people she serves. Great addition to have on your
-team!!”</div>
+          <div class="testimonial-quote">“I have had the pleasure of working off &amp; on with Crystal for years! One of the best, empathetic, knowledgeable, supportive support planner I have ever worked with. She is responsive and cares a lot for the people she serves. Great addition to have on your team!!”</div>
           <div class="testimonial-meta"><strong>Pamela</strong></div>
         </article>
 
-          <article class="testimonial-card">
-          <div class="testimonial-quote">“Crystal made it her mission to know our daughter and our family, and she has made the
-process of support plan management so much easier for us. She is incredibly
-responsive anytime we have a question or concern. She is professional, polite and
-concise when communicating with the team. Her record keeping is excellent, and she
-promptly provides supporting documentation to so many conversations, which results in
-keeping services running smoothly for my daughter and our family. We are very thankful that Crystal is on our team, and we highly recommend her and North Star Support Co to other families.”</div>
+        <article class="testimonial-card">
+          <div class="testimonial-quote">“Crystal made it her mission to know our daughter and our family, and she has made the process of support plan management so much easier for us. She is incredibly responsive anytime we have a question or concern. She is professional, polite and concise when communicating with the team. Her record keeping is excellent, and she promptly provides supporting documentation to so many conversations, which results in keeping services running smoothly for my daughter and our family. We are very thankful that Crystal is on our team, and we highly recommend her and North Star Support Co to other families.”</div>
           <div class="testimonial-meta"><strong>Carol</strong></div>
         </article>
 
-         <article class="testimonial-card">
-          <div class="testimonial-quote">“I have two adult kiddos on the DD waiver CDCS and I couldn&#39;t do this without Crystal. I
-hired Crystal 7 years ago and it was the best decision I have made. Crystal has a very
-broad knowledge of every aspect in creating a plan. She is very quick to respond and
-checks in regularly.”</div>
+        <article class="testimonial-card">
+          <div class="testimonial-quote">“I have two adult kiddos on the DD waiver CDCS and I couldn’t do this without Crystal. I hired Crystal 7 years ago and it was the best decision I have made. Crystal has a very broad knowledge of every aspect in creating a plan. She is very quick to respond and checks in regularly.”</div>
           <div class="testimonial-meta"><strong>Mary S.</strong></div>
         </article>
 
         <article class="testimonial-card">
-          <div class="testimonial-quote">“Crystal has helped us for years. She is so patient and kind we are so thankful to have
-her help us.”</div>
+          <div class="testimonial-quote">“Crystal has helped us for years. She is so patient and kind we are so thankful to have her help us.”</div>
           <div class="testimonial-meta"><strong>Anonymous</strong></div>
         </article>
 
@@ -857,14 +783,7 @@ her help us.”</div>
         </article>
 
         <article class="testimonial-card">
-          <div class="testimonial-quote">“Crystal at North Star Support for me is comforting, reassuring, understanding, reliable
-etc. I have worked with Crystal for years and I know when I reach out I am going to get
-an quick response with problem solutions. Crystal understands her clients and
-advocates for the family on paid time and her own time, that kind of care and
-commitment is not found easily. I personally appreciate Crystal patience with me, I tend
-to get overwhelmed or confused by some of S.P lingo but she takes time via email and
-phone calls to make sure all the T's are cross and I'm fully informed. Look no further. If
-you want accuracy and peace of mind Crystal at North Star Support Co is the way to go.”</div>
+          <div class="testimonial-quote">“Crystal at North Star Support for me is comforting, reassuring, understanding, reliable etc. I have worked with Crystal for years and I know when I reach out I am going to get a quick response with problem solutions. Crystal understands her clients and advocates for the family on paid time and her own time, that kind of care and commitment is not found easily. I personally appreciate Crystal's patience with me. I tend to get overwhelmed or confused by some support planning lingo, but she takes time via email and phone calls to make sure all the T’s are crossed and I'm fully informed. If you want accuracy and peace of mind, Crystal at North Star Support Co is the way to go.”</div>
           <div class="testimonial-meta"><strong>Gloriane M.</strong></div>
         </article>
       </div>
@@ -882,15 +801,27 @@ you want accuracy and peace of mind Crystal at North Star Support Co is the way 
 
     <div class="box container">
       <section class="cta-card">
-        <h3>Interested in working with Planner Name?</h3>
-        <p>Use this closing section as the call to action for each planner page. You can keep it simple, warm, and direct.</p>
+        <h3>Interested in working with Crystal?</h3>
+        <p>Connect with North Star Support Co. to ask questions, learn more about planning support, or get matched with the right planner for your county.</p>
         <ul class="actions special">
           <li><a href="contact.html" class="button">Open Contact Form</a></li>
-          <li><a href="mailto:planner@northstarsupportco.com" class="button alt">Email Planner Name</a></li>
+          <li><a href="mailto:crystal@northstarsupportco.com" class="button alt">Email Crystal</a></li>
         </ul>
       </section>
     </div>
 
+  </div>
+
+  <div class="planner-lightbox" id="plannerLightbox" aria-hidden="true">
+    <div class="planner-lightbox-backdrop" data-lightbox-close></div>
+    <div class="planner-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Expanded photo view">
+      <button class="planner-lightbox-close" type="button" aria-label="Close image viewer" data-lightbox-close>&times;</button>
+      <button class="planner-lightbox-arrow planner-lightbox-prev" type="button" aria-label="Previous image" data-lightbox-prev>&#10094;</button>
+      <div class="planner-lightbox-image-wrap">
+        <img id="plannerLightboxImage" src="" alt="Expanded planner photo" />
+      </div>
+      <button class="planner-lightbox-arrow planner-lightbox-next" type="button" aria-label="Next image" data-lightbox-next>&#10095;</button>
+    </div>
   </div>
 
   <div id="footer">
@@ -902,11 +833,145 @@ you want accuracy and peace of mind Crystal at North Star Support Co is the way 
     </div>
   </div>
 
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/browser.min.js"></script>
+  <script src="/assets/js/breakpoints.min.js"></script>
+  <script src="/assets/js/util.js"></script>
+  <script src="/assets/js/main.js"></script>
+
+  <script>
+    (function () {
+      const slider = document.querySelector('[data-slider]');
+      if (!slider) return;
+
+      const slides = Array.from(slider.querySelectorAll('[data-slide]'));
+      const thumbs = Array.from(slider.querySelectorAll('[data-thumb]'));
+      const prevBtn = slider.querySelector('[data-prev]');
+      const nextBtn = slider.querySelector('[data-next]');
+      const lightboxButtons = Array.from(slider.querySelectorAll('[data-open-lightbox]'));
+
+      const lightbox = document.getElementById('plannerLightbox');
+      const lightboxImage = document.getElementById('plannerLightboxImage');
+      const lightboxCloseButtons = Array.from(document.querySelectorAll('[data-lightbox-close]'));
+      const lightboxPrev = document.querySelector('[data-lightbox-prev]');
+      const lightboxNext = document.querySelector('[data-lightbox-next]');
+
+      let currentIndex = 0;
+      let autoRotate = null;
+      const rotationDelay = 5000;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+        thumbs.forEach((thumb, i) => thumb.classList.toggle('active', i === index));
+        currentIndex = index;
+      }
+
+      function nextSlide() {
+        showSlide((currentIndex + 1) % slides.length);
+      }
+
+      function prevSlide() {
+        showSlide((currentIndex - 1 + slides.length) % slides.length);
+      }
+
+      function startAutoRotate() {
+        stopAutoRotate();
+        autoRotate = window.setInterval(nextSlide, rotationDelay);
+      }
+
+      function stopAutoRotate() {
+        if (autoRotate) {
+          window.clearInterval(autoRotate);
+          autoRotate = null;
+        }
+      }
+
+      function openLightbox(index) {
+        const button = lightboxButtons[index];
+        if (!button || !lightbox || !lightboxImage) return;
+
+        lightboxImage.src = button.getAttribute('data-open-lightbox');
+        lightboxImage.alt = button.getAttribute('data-lightbox-alt') || 'Expanded planner photo';
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('lightbox-open');
+        currentIndex = index;
+        stopAutoRotate();
+      }
+
+      function closeLightbox() {
+        if (!lightbox || !lightboxImage) return;
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightboxImage.src = '';
+        document.body.classList.remove('lightbox-open');
+        startAutoRotate();
+      }
+
+      function openNextLightboxImage() {
+        const nextIndex = (currentIndex + 1) % lightboxButtons.length;
+        showSlide(nextIndex);
+        openLightbox(nextIndex);
+      }
+
+      function openPrevLightboxImage() {
+        const prevIndex = (currentIndex - 1 + lightboxButtons.length) % lightboxButtons.length;
+        showSlide(prevIndex);
+        openLightbox(prevIndex);
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function () {
+          prevSlide();
+          startAutoRotate();
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+          nextSlide();
+          startAutoRotate();
+        });
+      }
+
+      thumbs.forEach((thumb, index) => {
+        thumb.addEventListener('click', function () {
+          showSlide(index);
+          startAutoRotate();
+        });
+      });
+
+      lightboxButtons.forEach((button, index) => {
+        button.addEventListener('click', function () {
+          showSlide(index);
+          openLightbox(index);
+        });
+      });
+
+      lightboxCloseButtons.forEach((button) => {
+        button.addEventListener('click', closeLightbox);
+      });
+
+      if (lightboxPrev) lightboxPrev.addEventListener('click', openPrevLightboxImage);
+      if (lightboxNext) lightboxNext.addEventListener('click', openNextLightboxImage);
+
+      document.addEventListener('keydown', function (event) {
+        if (!lightbox || !lightbox.classList.contains('is-open')) return;
+        if (event.key === 'Escape') closeLightbox();
+        if (event.key === 'ArrowRight') openNextLightboxImage();
+        if (event.key === 'ArrowLeft') openPrevLightboxImage();
+      });
+
+      slider.addEventListener('mouseenter', stopAutoRotate);
+      slider.addEventListener('mouseleave', function () {
+        if (!lightbox || !lightbox.classList.contains('is-open')) startAutoRotate();
+      });
+
+      showSlide(0);
+      startAutoRotate();
+    })();
+  </script>
+
   <script>
     (function () {
       const cards = Array.from(document.querySelectorAll('.testimonial-card'));
@@ -921,8 +986,7 @@ you want accuracy and peace of mind Crystal at North Star Support Co is the way 
       }
 
       function nextCard() {
-        const next = (currentIndex + 1) % cards.length;
-        showCard(next);
+        showCard((currentIndex + 1) % cards.length);
       }
 
       function startRotation() {
@@ -941,9 +1005,7 @@ you want accuracy and peace of mind Crystal at North Star Support Co is the way 
         });
       });
 
-      if (cards.length > 1) {
-        startRotation();
-      }
+      if (cards.length > 1) startRotation();
     })();
   </script>
 </body>
