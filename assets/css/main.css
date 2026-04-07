@@ -4563,7 +4563,8 @@ select {
     right: 0.65em;
   }
 
- .planner-slide img {
+/* Slider image override */
+.planner-slide img {
   display: block;
   width: 100%;
   height: 620px;
