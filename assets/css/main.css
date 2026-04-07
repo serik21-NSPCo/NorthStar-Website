@@ -4563,12 +4563,17 @@ select {
     right: 0.65em;
   }
 
-  .planner-slider-thumbs {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.65em;
-  }
+ .planner-slide img {
+  display: block;
+  width: 100%;
+  height: 620px;
+  object-fit: contain;
+  background: #f7f8fa;
+}
 
-  .planner-thumb img {
-    height: 64px;
-  }
+.planner-thumb img {
+  display: block;
+  width: 100%;
+  height: 72px;
+  object-fit: cover;
 }
