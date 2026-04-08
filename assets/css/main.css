@@ -4779,4 +4779,63 @@ footer.major {
   display: none !important;
 }
 
+/* Planner bio testimonial slider */
+.page-planner-bio .testimonial-viewport {
+  position: relative;
+  overflow: hidden;
+  min-height: 260px;
+  padding: 0 5.25em;
+}
+
+.page-planner-bio .testimonial-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(0, 36, 93, 0.92);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4em;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 0.45em 1em rgba(11, 31, 68, 0.18);
+}
+
+.page-planner-bio .testimonial-arrow:hover {
+  background: rgba(106, 174, 0, 0.96);
+}
+
+.page-planner-bio .testimonial-prev {
+  left: 1.25em;
+}
+
+.page-planner-bio .testimonial-next {
+  right: 1.25em;
+}
+
+@media screen and (max-width: 736px) {
+  .page-planner-bio .testimonial-viewport {
+    padding: 0 3.75em;
+  }
+
+  .page-planner-bio .testimonial-arrow {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1em;
+  }
+
+  .page-planner-bio .testimonial-prev {
+    left: 0.4em;
+  }
+
+  .page-planner-bio .testimonial-next {
+    right: 0.4em;
+  }
+}
 
