@@ -219,139 +219,181 @@
   <script src="/assets/js/main.js"></script>
 
   <script>
-    (function () {
-      const slider = document.querySelector('[data-slider]');
-      if (!slider) return;
+  (function () {
+    const slider = document.querySelector('[data-slider]');
+    if (!slider) return;
 
-      const slides = Array.from(slider.querySelectorAll('[data-slide]'));
-      const thumbs = Array.from(slider.querySelectorAll('[data-thumb]'));
-      const prevBtn = slider.querySelector('[data-prev]');
-      const nextBtn = slider.querySelector('[data-next]');
-      const lightboxButtons = Array.from(slider.querySelectorAll('[data-open-lightbox]'));
+    const slides = Array.from(slider.querySelectorAll('[data-slide]'));
+    const thumbs = Array.from(slider.querySelectorAll('[data-thumb]'));
+    const prevBtn = slider.querySelector('[data-prev]');
+    const nextBtn = slider.querySelector('[data-next]');
+    const lightboxButtons = Array.from(slider.querySelectorAll('[data-open-lightbox]'));
 
-      const lightbox = document.getElementById('plannerLightbox');
-      const lightboxImage = document.getElementById('plannerLightboxImage');
-      const lightboxCloseButtons = Array.from(document.querySelectorAll('[data-lightbox-close]'));
-      const lightboxPrev = document.querySelector('[data-lightbox-prev]');
-      const lightboxNext = document.querySelector('[data-lightbox-next]');
+    const lightbox = document.getElementById('plannerLightbox');
+    const lightboxImage = document.getElementById('plannerLightboxImage');
+    const lightboxCloseButtons = Array.from(document.querySelectorAll('[data-lightbox-close]'));
+    const lightboxPrev = document.querySelector('[data-lightbox-prev]');
+    const lightboxNext = document.querySelector('[data-lightbox-next]');
 
-      let currentIndex = 0;
-      let autoRotate = null;
-      const rotationDelay = 5000;
+    let currentIndex = 0;
+    let autoRotate = null;
+    const rotationDelay = 5000;
 
-      function showSlide(index) {
-        slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
-        thumbs.forEach((thumb, i) => thumb.classList.toggle('active', i === index));
-        currentIndex = index;
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const swipeThreshold = 40;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+      thumbs.forEach((thumb, i) => thumb.classList.toggle('active', i === index));
+      currentIndex = index;
+    }
+
+    function nextSlide() {
+      showSlide((currentIndex + 1) % slides.length);
+    }
+
+    function prevSlide() {
+      showSlide((currentIndex - 1 + slides.length) % slides.length);
+    }
+
+    function startAutoRotate() {
+      stopAutoRotate();
+      autoRotate = window.setInterval(nextSlide, rotationDelay);
+    }
+
+    function stopAutoRotate() {
+      if (autoRotate) {
+        window.clearInterval(autoRotate);
+        autoRotate = null;
       }
+    }
 
-      function nextSlide() {
-        showSlide((currentIndex + 1) % slides.length);
-      }
+    function openLightbox(index) {
+      const button = lightboxButtons[index];
+      if (!button || !lightbox || !lightboxImage) return;
 
-      function prevSlide() {
-        showSlide((currentIndex - 1 + slides.length) % slides.length);
-      }
+      lightboxImage.src = button.getAttribute('data-open-lightbox');
+      lightboxImage.alt = button.getAttribute('data-lightbox-alt') || 'Expanded planner photo';
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('lightbox-open');
+      currentIndex = index;
+      stopAutoRotate();
+    }
 
-      function startAutoRotate() {
-        stopAutoRotate();
-        autoRotate = window.setInterval(nextSlide, rotationDelay);
-      }
+    function closeLightbox() {
+      if (!lightbox || !lightboxImage) return;
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImage.src = '';
+      document.body.classList.remove('lightbox-open');
+      startAutoRotate();
+    }
 
-      function stopAutoRotate() {
-        if (autoRotate) {
-          window.clearInterval(autoRotate);
-          autoRotate = null;
-        }
-      }
+    function openNextLightboxImage() {
+      const nextIndex = (currentIndex + 1) % lightboxButtons.length;
+      showSlide(nextIndex);
+      openLightbox(nextIndex);
+    }
 
-      function openLightbox(index) {
-        const button = lightboxButtons[index];
-        if (!button || !lightbox || !lightboxImage) return;
+    function openPrevLightboxImage() {
+      const prevIndex = (currentIndex - 1 + lightboxButtons.length) % lightboxButtons.length;
+      showSlide(prevIndex);
+      openLightbox(prevIndex);
+    }
 
-        lightboxImage.src = button.getAttribute('data-open-lightbox');
-        lightboxImage.alt = button.getAttribute('data-lightbox-alt') || 'Expanded planner photo';
-        lightbox.classList.add('is-open');
-        lightbox.setAttribute('aria-hidden', 'false');
-        document.body.classList.add('lightbox-open');
-        currentIndex = index;
-        stopAutoRotate();
-      }
-
-      function closeLightbox() {
-        if (!lightbox || !lightboxImage) return;
-        lightbox.classList.remove('is-open');
-        lightbox.setAttribute('aria-hidden', 'true');
-        lightboxImage.src = '';
-        document.body.classList.remove('lightbox-open');
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function () {
+        prevSlide();
         startAutoRotate();
-      }
-
-      function openNextLightboxImage() {
-        const nextIndex = (currentIndex + 1) % lightboxButtons.length;
-        showSlide(nextIndex);
-        openLightbox(nextIndex);
-      }
-
-      function openPrevLightboxImage() {
-        const prevIndex = (currentIndex - 1 + lightboxButtons.length) % lightboxButtons.length;
-        showSlide(prevIndex);
-        openLightbox(prevIndex);
-      }
-
-      if (prevBtn) {
-        prevBtn.addEventListener('click', function () {
-          prevSlide();
-          startAutoRotate();
-        });
-      }
-
-      if (nextBtn) {
-        nextBtn.addEventListener('click', function () {
-          nextSlide();
-          startAutoRotate();
-        });
-      }
-
-      thumbs.forEach((thumb, index) => {
-        thumb.addEventListener('click', function () {
-          showSlide(index);
-          startAutoRotate();
-        });
       });
+    }
 
-      lightboxButtons.forEach((button, index) => {
-        button.addEventListener('click', function () {
-          showSlide(index);
-          openLightbox(index);
-        });
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function () {
+        nextSlide();
+        startAutoRotate();
       });
+    }
 
-      lightboxCloseButtons.forEach((button) => {
-        button.addEventListener('click', closeLightbox);
+    thumbs.forEach((thumb, index) => {
+      thumb.addEventListener('click', function () {
+        showSlide(index);
+        startAutoRotate();
       });
+    });
 
-      if (lightboxPrev) lightboxPrev.addEventListener('click', openPrevLightboxImage);
-      if (lightboxNext) lightboxNext.addEventListener('click', openNextLightboxImage);
+    lightboxButtons.forEach((button, index) => {
+      button.addEventListener('click', function () {
+        showSlide(index);
+        openLightbox(index);
+      });
+    });
 
-      document.addEventListener('keydown', function (event) {
-        if (!lightbox || !lightbox.classList.contains('is-open')) return;
+    lightboxCloseButtons.forEach((button) => {
+      button.addEventListener('click', closeLightbox);
+    });
+
+    if (lightboxPrev) lightboxPrev.addEventListener('click', openPrevLightboxImage);
+    if (lightboxNext) lightboxNext.addEventListener('click', openNextLightboxImage);
+
+    document.addEventListener('keydown', function (event) {
+      if (lightbox && lightbox.classList.contains('is-open')) {
         if (event.key === 'Escape') closeLightbox();
         if (event.key === 'ArrowRight') openNextLightboxImage();
         if (event.key === 'ArrowLeft') openPrevLightboxImage();
-      });
+        return;
+      }
 
-      slider.addEventListener('mouseenter', stopAutoRotate);
-      slider.addEventListener('mouseleave', function () {
-        if (!lightbox || !lightbox.classList.contains('is-open')) startAutoRotate();
-      });
+      if (event.key === 'ArrowRight') {
+        nextSlide();
+        startAutoRotate();
+      }
 
-      showSlide(0);
-      startAutoRotate();
-    })();
-  </script>
+      if (event.key === 'ArrowLeft') {
+        prevSlide();
+        startAutoRotate();
+      }
+    });
 
- <script>
+    slider.addEventListener('mouseenter', stopAutoRotate);
+    slider.addEventListener('mouseleave', function () {
+      if (!lightbox || !lightbox.classList.contains('is-open')) startAutoRotate();
+    });
+
+    const sliderMain = slider.querySelector('.planner-slider-main');
+
+    if (sliderMain) {
+      sliderMain.addEventListener('touchstart', function (event) {
+        touchStartX = event.changedTouches[0].clientX;
+        stopAutoRotate();
+      }, { passive: true });
+
+      sliderMain.addEventListener('touchend', function (event) {
+        touchEndX = event.changedTouches[0].clientX;
+        const deltaX = touchEndX - touchStartX;
+
+        if (Math.abs(deltaX) > swipeThreshold) {
+          if (deltaX < 0) {
+            nextSlide();
+          } else {
+            prevSlide();
+          }
+        }
+
+        if (!lightbox || !lightbox.classList.contains('is-open')) {
+          startAutoRotate();
+        }
+      }, { passive: true });
+    }
+
+    showSlide(0);
+    startAutoRotate();
+  })();
+</script>
+
+<script>
   (function () {
     const viewport = document.getElementById('testimonialViewport');
     if (!viewport) return;
@@ -360,26 +402,80 @@
     const prevBtn = document.getElementById('testimonialPrev');
     const nextBtn = document.getElementById('testimonialNext');
 
+    if (!cards.length || !prevBtn || !nextBtn) return;
+
     let currentIndex = cards.findIndex(card => card.classList.contains('active'));
     if (currentIndex < 0) currentIndex = 0;
+
+    let autoRotate = null;
+    const rotationDelay = 6000;
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const swipeThreshold = 40;
 
     function showTestimonial(index) {
       cards.forEach((card, i) => {
         card.classList.toggle('active', i === index);
       });
+      currentIndex = index;
+    }
+
+    function nextTestimonial() {
+      showTestimonial((currentIndex + 1) % cards.length);
+    }
+
+    function prevTestimonial() {
+      showTestimonial((currentIndex - 1 + cards.length) % cards.length);
+    }
+
+    function startAutoRotate() {
+      stopAutoRotate();
+      autoRotate = window.setInterval(nextTestimonial, rotationDelay);
+    }
+
+    function stopAutoRotate() {
+      if (autoRotate) {
+        window.clearInterval(autoRotate);
+        autoRotate = null;
+      }
     }
 
     prevBtn.addEventListener('click', function () {
-      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-      showTestimonial(currentIndex);
+      prevTestimonial();
+      startAutoRotate();
     });
 
     nextBtn.addEventListener('click', function () {
-      currentIndex = (currentIndex + 1) % cards.length;
-      showTestimonial(currentIndex);
+      nextTestimonial();
+      startAutoRotate();
     });
 
+    viewport.addEventListener('mouseenter', stopAutoRotate);
+    viewport.addEventListener('mouseleave', startAutoRotate);
+
+    viewport.addEventListener('touchstart', function (event) {
+      touchStartX = event.changedTouches[0].clientX;
+      stopAutoRotate();
+    }, { passive: true });
+
+    viewport.addEventListener('touchend', function (event) {
+      touchEndX = event.changedTouches[0].clientX;
+      const deltaX = touchEndX - touchStartX;
+
+      if (Math.abs(deltaX) > swipeThreshold) {
+        if (deltaX < 0) {
+          nextTestimonial();
+        } else {
+          prevTestimonial();
+        }
+      }
+
+      startAutoRotate();
+    }, { passive: true });
+
     showTestimonial(currentIndex);
+    startAutoRotate();
   })();
 </script>
 </body>
