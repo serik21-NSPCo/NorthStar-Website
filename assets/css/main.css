@@ -4743,3 +4743,31 @@ footer.major {
   padding-top: 2em !important;
   padding-bottom: 2em !important;
 }
+
+/* Planner card button row */
+.planner-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.6em;
+  margin-top: 0.4em;
+  flex-wrap: wrap;
+}
+
+/* Make buttons slightly tighter */
+.planner-actions .button.small {
+  font-size: 0.78em;
+  padding: 0.45em 0.8em;
+  min-width: auto;
+}
+
+/* Optional: style the "My Bio" button differently */
+.planner-actions .button.alt {
+  background: transparent;
+  border: 1px solid var(--ns-green);
+  color: var(--ns-green);
+}
+
+.planner-actions .button.alt:hover {
+  background: var(--ns-green);
+  color: #fff;
+}
