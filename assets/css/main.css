@@ -4767,3 +4767,7 @@ body.lightbox-open {
 #header h1 {
   margin-top: 1.5em;
 }
+
+.header-logo-bar {
+  border-bottom: 3px solid var(--ns-green);
+}
