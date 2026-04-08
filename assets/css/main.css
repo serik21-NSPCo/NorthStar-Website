@@ -4500,44 +4500,56 @@ textarea {
   line-height: 1.4;
 }
 
-/* Waiver radio field */
+/* Contact form waiver radios */
 .waiver-field {
   margin: 1.5em 0;
 }
 
 .waiver-field p {
-  margin: 0 0 0.75em 0;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #6b6b6b;
-  font-size: 0.95em;
+  margin: 0 0 0.85em 0;
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #4c5c75;
 }
 
 .waiver-field .radio-group {
   display: flex;
-  gap: 1.5em;
+  gap: 1.75em;
   align-items: center;
   flex-wrap: wrap;
 }
 
+/* Force radios visible even if theme hides them */
 .waiver-field input[type="radio"] {
-  appearance: auto;
-  -webkit-appearance: radio;
-  -moz-appearance: radio;
-  position: static;
-  opacity: 1;
-  width: auto;
-  height: auto;
-  margin: 0 0.45em 0 0;
+  -webkit-appearance: radio !important;
+  -moz-appearance: radio !important;
+  appearance: radio !important;
+  display: inline-block !important;
+  position: static !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  width: 1.1em !important;
+  height: 1.1em !important;
+  margin: 0 0.45em 0 0 !important;
+  vertical-align: middle !important;
 }
 
-.waiver-field label {
-  display: inline-block;
-  margin: 0;
-  font-weight: 600;
+/* Kill fake theme bullets if they exist */
+.waiver-field input[type="radio"] + label:before,
+.waiver-field input[type="radio"] + label:after {
+  display: none !important;
+  content: none !important;
+}
+
+.waiver-field input[type="radio"] + label {
+  display: inline-block !important;
+  margin: 0 !important;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #173b73;
+  color: #5f5f5f;
   cursor: pointer;
+  vertical-align: middle;
 }
