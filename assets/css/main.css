@@ -4771,3 +4771,12 @@ footer.major {
   background: var(--ns-green);
   color: #fff;
 }
+
+/* Hide testimonial dots */
+.testimonial-slider .slick-dots,
+.testimonial-slider .dots,
+.testimonial-dots {
+  display: none !important;
+}
+
+
