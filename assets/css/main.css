@@ -4638,3 +4638,20 @@ textarea {
 .planner-card:hover .planner-headshot {
   transform: scale(1.05);
 }
+
+/* Remove faint horizontal divider lines */
+.box,
+.container,
+section,
+section.major,
+header.major {
+  border-top: none !important;
+}
+
+.box:before,
+.container:before,
+section:before,
+header.major:before {
+  display: none !important;
+  content: none !important;
+}
