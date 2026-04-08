@@ -4660,3 +4660,61 @@ header.major:before {
 #main > section {
   border-top: none !important;
 }
+
+/* Kill all theme separator lines */
+header.major,
+footer.major,
+#main,
+#header,
+#footer,
+.box,
+.box.container,
+.box.alt.container {
+  border: 0 !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Remove all generated separator pseudo-elements */
+header.major::before,
+header.major::after,
+header.major p::before,
+header.major p::after,
+footer.major::before,
+footer.major::after,
+#main::before,
+#main::after,
+#header::before,
+#header::after,
+#footer::before,
+#footer::after,
+.box::before,
+.box::after,
+.box.container::before,
+.box.container::after,
+.box.alt.container::before,
+.box.alt.container::after,
+.container::before,
+.container::after {
+  content: none !important;
+  display: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Remove the line above subtext in section headers */
+header.major p,
+footer.major p {
+  border-top: 0 !important;
+  padding-top: 0 !important;
+  margin-top: 1em !important;
+}
+
+/* Remove old footer framing */
+footer.major {
+  margin-top: 3em !important;
+  padding-top: 2em !important;
+  padding-bottom: 2em !important;
+}
