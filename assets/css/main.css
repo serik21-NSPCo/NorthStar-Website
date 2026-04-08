@@ -4553,3 +4553,80 @@ textarea {
   cursor: pointer;
   vertical-align: middle;
 }
+
+/* Meet Our Planners grid */
+.planner-grid-section {
+  margin: 0 auto;
+}
+
+.planner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2em;
+  margin-top: 2.5em;
+}
+
+.planner-card {
+  background: #fff;
+  border: 1px solid rgba(0, 36, 93, 0.12);
+  border-left: 5px solid var(--ns-green);
+  border-radius: 0.9em;
+  box-shadow: 0 0.65em 1.5em rgba(11, 31, 68, 0.08);
+  padding: 1.5em;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.planner-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1.1em 2.2em rgba(11, 31, 68, 0.14);
+}
+
+.planner-image-link {
+  display: inline-block;
+  text-decoration: none;
+  border: 0;
+}
+
+.planner-headshot {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1em auto;
+  border: 3px solid rgba(0, 36, 93, 0.08);
+}
+
+.planner-card h3 {
+  margin: 0 0 0.9em 0;
+  font-size: 1.15em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.planner-card h3 a {
+  color: #00245d;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.planner-card h3 a:hover {
+  color: var(--ns-green);
+}
+
+.planner-card .button.small {
+  min-width: 10em;
+}
+
+@media screen and (max-width: 980px) {
+  .planner-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .planner-grid {
+    grid-template-columns: 1fr;
+  }
+}
