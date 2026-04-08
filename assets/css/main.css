@@ -4182,3 +4182,299 @@ body.lightbox-open {
     padding: 1.25em 3.5em;
   }
 }
+
+/* =====================================================
+   April 2026 refinement patch
+   Restores preferred logo size, donation cards,
+   team photo sizing, and richer contact form styling.
+   ===================================================== */
+
+/* Restore larger header logo across the site */
+.logo-image,
+#header .logo-image {
+  max-width: 520px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.5em auto;
+}
+
+/* Restore planner/team images on About page to a more natural size */
+.team-card img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 0.75em;
+  margin: 0 auto 1.25em auto;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.team-card:hover img {
+  transform: scale(1.05);
+}
+
+.team-card h3,
+.team-role,
+.coverage-note {
+  text-align: center;
+}
+
+.coverage-note {
+  margin-top: auto;
+  padding-top: 1em;
+  border-top: 1px solid var(--ns-border);
+  font-size: 0.95em;
+}
+
+.coverage-note p {
+  margin: 0.75em 0 0 0;
+}
+
+.team-card .button.small {
+  display: inline-block;
+  width: auto;
+  min-width: 0;
+  margin: 0.75em auto;
+  text-align: center;
+}
+
+/* Restore the donation section feel from the earlier version */
+.donation-inline-grid,
+.donation-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.2em;
+  margin: 1.75em 0;
+}
+
+.donation-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid var(--ns-border);
+  border-radius: 1em;
+  box-shadow: var(--ns-shadow);
+  overflow: hidden;
+  padding: 0;
+}
+
+.donation-card-link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.25em 1em 1.1em 1em;
+}
+
+.quarter-badge,
+.quarter-label {
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--ns-green);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+  border-radius: 999px;
+}
+
+.quarter-badge {
+  position: absolute;
+  top: 0.9em;
+  right: 0.9em;
+  font-size: 0.76em;
+  padding: 0.6em 0.75em;
+}
+
+.quarter-label {
+  display: inline-block;
+  font-size: 0.78em;
+  padding: 0.65em 0.8em;
+  margin-bottom: 0.75em;
+}
+
+.donation-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 88px;
+  margin-bottom: 0.75em;
+  padding-top: 0.25em;
+}
+
+.donation-logo-wrap img,
+.donation-card img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.donation-logo-wrap img {
+  max-height: 60px;
+}
+
+.donation-card img {
+  height: 80px;
+  margin-bottom: 0.75em;
+}
+
+.donation-card,
+.donation-card-body {
+  text-align: center;
+}
+
+.donation-card-body h4,
+.donation-card p {
+  margin: 0;
+  color: var(--ns-navy);
+  font-weight: 600;
+}
+
+.donation-card-body h4 {
+  font-size: 1em;
+  line-height: 1.35em;
+}
+
+.donation-card-body p {
+  font-size: 0.95em;
+  line-height: 1.6em;
+  color: #5b6472;
+}
+
+/* Richer contact form controls and include tel fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select,
+textarea {
+  background: #ffffff;
+  border: 1.5px solid rgba(0, 36, 93, 0.18);
+  border-radius: 8px;
+  padding: 0.75em 0.9em;
+  font-size: 0.95em;
+  width: 100%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.08s ease;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+input[type="password"]:hover,
+select:hover,
+textarea:hover {
+  border-color: rgba(0, 36, 93, 0.35);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--ns-light-blue);
+  box-shadow: 0 0 0 3px rgba(89, 189, 244, 0.25), 0 2px 6px rgba(0, 0, 0, 0.06);
+  outline: none;
+  background: #ffffff;
+}
+
+textarea {
+  min-height: 10em;
+}
+
+.field-group {
+  margin-bottom: 1.6em;
+}
+
+.field-group label {
+  display: block;
+  margin-bottom: 0.45em;
+  color: var(--ns-navy);
+  font-size: 0.82em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.5em;
+}
+
+.info-panel {
+  background: linear-gradient(135deg, rgba(0, 36, 93, 0.96) 0%, rgba(32, 112, 170, 0.96) 100%);
+  color: #ffffff;
+  border-radius: 0.75em;
+  padding: 2em;
+  text-align: center;
+}
+
+.info-panel h3,
+.info-panel p,
+.info-panel strong {
+  color: #ffffff !important;
+}
+
+.contact-item {
+  margin: 1.75em 0;
+}
+
+.contact-label {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8em;
+  margin-bottom: 0.4em;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-label::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--ns-green);
+  margin: 0.35em auto 0 auto;
+}
+
+.contact-value {
+  font-size: 1.05em;
+  line-height: 1.6em;
+}
+
+.info-panel a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: none;
+  transition: color 0.25s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.info-panel a:hover {
+  color: var(--ns-green);
+  border-bottom: none;
+  transform: translateY(-1px);
+}
+
+@media screen and (max-width: 980px) {
+  .donation-inline-grid,
+  .donation-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .logo-image,
+  #header .logo-image {
+    max-width: 380px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .donation-inline-grid,
+  .donation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-card-link {
+    padding: 1.35em 1.1em 1.2em 1.1em;
+  }
+}
