@@ -4499,3 +4499,27 @@ textarea {
 .checkbox-option span {
   line-height: 1.4;
 }
+
+/* FIX: Ensure radios display correctly */
+input[type="radio"] {
+  appearance: auto;
+  -webkit-appearance: radio;
+  -moz-appearance: radio;
+  opacity: 1;
+  position: static;
+  width: auto;
+  height: auto;
+  margin-right: 0.5em;
+}
+
+/* Align radio + label nicely */
+.form-field label {
+  display: block;
+  margin: 0.4em 0;
+  cursor: pointer;
+}
+
+.form-field input[type="radio"] + label {
+  display: inline-block;
+  margin-left: 0.4em;
+}
