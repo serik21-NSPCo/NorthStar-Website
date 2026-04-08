@@ -4630,3 +4630,11 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
+
+.planner-headshot {
+  transition: transform 0.25s ease;
+}
+
+.planner-card:hover .planner-headshot {
+  transform: scale(1.05);
+}
