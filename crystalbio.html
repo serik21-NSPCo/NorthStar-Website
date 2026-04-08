@@ -351,41 +351,36 @@
     })();
   </script>
 
-  <script>
-    (function () {
-      const cards = Array.from(document.querySelectorAll('.testimonial-card'));
-      const dots = Array.from(document.querySelectorAll('.dot'));
-      let currentIndex = 0;
-      let timer = null;
+ <script>
+  (function () {
+    const viewport = document.getElementById('testimonialViewport');
+    if (!viewport) return;
 
-      function showCard(index) {
-        cards.forEach((card, i) => card.classList.toggle('active', i === index));
-        dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
-        currentIndex = index;
-      }
+    const cards = Array.from(viewport.querySelectorAll('.testimonial-card'));
+    const prevBtn = document.getElementById('testimonialPrev');
+    const nextBtn = document.getElementById('testimonialNext');
 
-      function nextCard() {
-        showCard((currentIndex + 1) % cards.length);
-      }
+    let currentIndex = cards.findIndex(card => card.classList.contains('active'));
+    if (currentIndex < 0) currentIndex = 0;
 
-      function startRotation() {
-        timer = window.setInterval(nextCard, 10000);
-      }
-
-      function resetRotation() {
-        window.clearInterval(timer);
-        startRotation();
-      }
-
-      dots.forEach((dot, index) => {
-        dot.addEventListener('click', function () {
-          showCard(index);
-          resetRotation();
-        });
+    function showTestimonial(index) {
+      cards.forEach((card, i) => {
+        card.classList.toggle('active', i === index);
       });
+    }
 
-      if (cards.length > 1) startRotation();
-    })();
-  </script>
+    prevBtn.addEventListener('click', function () {
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      showTestimonial(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', function () {
+      currentIndex = (currentIndex + 1) % cards.length;
+      showTestimonial(currentIndex);
+    });
+
+    showTestimonial(currentIndex);
+  })();
+</script>
 </body>
 </html>
