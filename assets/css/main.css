@@ -4500,29 +4500,44 @@ textarea {
   line-height: 1.4;
 }
 
-/* FIX: Ensure radios display correctly */
-input[type="radio"] {
+/* Waiver radio field */
+.waiver-field {
+  margin: 1.5em 0;
+}
+
+.waiver-field p {
+  margin: 0 0 0.75em 0;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6b6b6b;
+  font-size: 0.95em;
+}
+
+.waiver-field .radio-group {
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.waiver-field input[type="radio"] {
   appearance: auto;
   -webkit-appearance: radio;
   -moz-appearance: radio;
-  opacity: 1;
   position: static;
+  opacity: 1;
   width: auto;
   height: auto;
-  margin-right: 0.5em;
+  margin: 0 0.45em 0 0;
 }
 
-/* Align radio + label nicely */
-.form-field {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-field input[type="radio"],
-.form-field input[type="radio"] + label {
+.waiver-field label {
   display: inline-block;
-}
-
-.form-field label {
-  margin-right: 1.5em;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #173b73;
+  cursor: pointer;
 }
