@@ -87,15 +87,20 @@
               <input id="contact-email" name="Email" type="email" required />
             </div>
 
-            
-	    <div class="field-group">
-  		<label>Do you currently have a waiver?</label>
+            <div class="form-field">
+  <label>Do you currently have a waiver in Minnesota?</label>
 
- 		 <label class="checkbox-row">
-    			<input id="has-waiver" type="checkbox" name="Waiver" />
-   			<span>Yes, I currently have a disability waiver in Minnesota.</span>
- 		</label>
-		</div>
+  <label class="checkbox-option">
+    <input type="radio" name="waiver" value="yes">
+    <span>Yes</span>
+  </label>
+
+  <label class="checkbox-option">
+    <input type="radio" name="waiver" value="no">
+    <span>No</span>
+  </label>
+</div>
+	    
 
             <div class="field-group">
               <label for="contact-message">Questions or Requests</label>
