@@ -4513,13 +4513,16 @@ input[type="radio"] {
 }
 
 /* Align radio + label nicely */
-.form-field label {
-  display: block;
-  margin: 0.4em 0;
-  cursor: pointer;
+.form-field {
+  display: flex;
+  flex-direction: column;
 }
 
+.form-field input[type="radio"],
 .form-field input[type="radio"] + label {
   display: inline-block;
-  margin-left: 0.4em;
+}
+
+.form-field label {
+  margin-right: 1.5em;
 }
