@@ -4655,3 +4655,8 @@ header.major:before {
   display: none !important;
   content: none !important;
 }
+
+#main > .container,
+#main > section {
+  border-top: none !important;
+}
