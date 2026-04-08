@@ -4562,24 +4562,43 @@ textarea {
 .planner-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2em;
-  margin-top: 2.5em;
+  gap: 1.35em;
+  margin-top: 2em;
 }
 
 .planner-card {
+  position: relative;
   background: #fff;
   border: 1px solid rgba(0, 36, 93, 0.12);
   border-left: 5px solid var(--ns-green);
-  border-radius: 0.9em;
-  box-shadow: 0 0.65em 1.5em rgba(11, 31, 68, 0.08);
-  padding: 1.5em;
+  border-radius: 0.8em;
+  box-shadow: 0 0.5em 1.15em rgba(11, 31, 68, 0.08);
+  padding: 1.05em 1em 1em 1em;
   text-align: center;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .planner-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 1.1em 2.2em rgba(11, 31, 68, 0.14);
+  transform: translateY(-3px);
+  box-shadow: 0 0.9em 1.8em rgba(11, 31, 68, 0.12);
+}
+
+.planner-card-stretch {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border: 0 !important;
+  text-decoration: none !important;
+  background: transparent;
+}
+
+.planner-image-link,
+.planner-card h3 a,
+.planner-card .button {
+  position: relative;
+  z-index: 2;
 }
 
 .planner-image-link {
@@ -4589,20 +4608,26 @@ textarea {
 }
 
 .planner-headshot {
-  width: 160px;
-  height: 160px;
+  width: 118px;
+  height: 118px;
   object-fit: cover;
   border-radius: 50%;
   display: block;
-  margin: 0 auto 1em auto;
-  border: 3px solid rgba(0, 36, 93, 0.08);
+  margin: 0 auto 0.75em auto;
+  border: 2px solid rgba(0, 36, 93, 0.08);
+  transition: transform 0.25s ease;
+}
+
+.planner-card:hover .planner-headshot {
+  transform: scale(1.05);
 }
 
 .planner-card h3 {
-  margin: 0 0 0.9em 0;
-  font-size: 1.15em;
-  letter-spacing: 0.08em;
+  margin: 0 0 0.65em 0;
+  font-size: 1.02em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+  line-height: 1.35em;
 }
 
 .planner-card h3 a {
@@ -4616,7 +4641,11 @@ textarea {
 }
 
 .planner-card .button.small {
-  min-width: 10em;
+  min-width: 0;
+  width: auto;
+  padding: 0 1em;
+  line-height: 2.8em;
+  font-size: 0.78em;
 }
 
 @media screen and (max-width: 980px) {
@@ -4629,14 +4658,10 @@ textarea {
   .planner-grid {
     grid-template-columns: 1fr;
   }
-}
 
-.planner-headshot {
-  transition: transform 0.25s ease;
-}
-
-.planner-card:hover .planner-headshot {
-  transform: scale(1.05);
+  .planner-card {
+    padding: 1em 0.95em 0.95em 0.95em;
+  }
 }
 
 /* Remove faint horizontal divider lines */
