@@ -4741,3 +4741,29 @@ body.lightbox-open {
     padding: 1em 0.95em 0.95em 0.95em;
   }
 }
+
+/* Logo bar across top of header */
+#header {
+  padding-top: 0; /* remove top padding so bar sits flush */
+}
+
+/* White logo band */
+.header-logo-bar {
+  width: 100%;
+  background: #ffffff;
+  padding: 1.25em 0;
+  box-shadow: 0 0.35em 1em rgba(11, 31, 68, 0.08);
+}
+
+/* Keep logo centered and sized */
+.header-logo-bar .logo-image {
+  max-width: 460px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Push header text down below logo bar */
+#header h1 {
+  margin-top: 1.5em;
+}
