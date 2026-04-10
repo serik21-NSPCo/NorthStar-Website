@@ -4861,3 +4861,23 @@ body.lightbox-open {
     padding: 0.8em 0.9em;
   }
 }
+
+/* Alt buttons = same style, just lighter border initially */
+.button.alt,
+input[type="submit"].alt,
+input[type="reset"].alt,
+input[type="button"].alt {
+  background-color: transparent !important;
+  color: var(--ns-navy) !important;
+  box-shadow: inset 0 0 0 2px var(--ns-navy) !important;
+}
+
+/* Alt hover = SAME green as primary */
+.button.alt:hover,
+input[type="submit"].alt:hover,
+input[type="reset"].alt:hover,
+input[type="button"].alt:hover {
+  background-color: var(--ns-green) !important;
+  color: #ffffff !important;
+  box-shadow: inset 0 0 0 2px var(--ns-green) !important;
+}
