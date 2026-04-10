@@ -4793,3 +4793,71 @@ body.lightbox-open {
   max-width: 760px;
   margin: 0 auto;
 }
+
+.page-planner-bio .planner-lightbox-dialog {
+  position: relative;
+  z-index: 2;
+  width: min(92vw, 1280px);
+  height: min(88vh, 900px);
+  margin: 4vh auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-planner-bio .planner-lightbox-image-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5em 4.75em;
+  gap: 1em;
+}
+
+.page-planner-bio .planner-lightbox-image-wrap img {
+  max-width: 100%;
+  max-height: calc(100% - 5em);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.85em;
+  box-shadow: 0 0.8em 2em rgba(0, 0, 0, 0.28);
+  background: #ffffff;
+}
+
+.page-planner-bio .planner-lightbox-caption {
+  width: min(90%, 720px);
+  padding: 0.9em 1.1em;
+  border-radius: 0.75em;
+  background: rgba(8, 18, 40, 0.82);
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 0.95em;
+  box-shadow: 0 0.5em 1.2em rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 736px) {
+  .page-planner-bio .planner-lightbox-dialog {
+    width: 96vw;
+    height: 86vh;
+    margin: 5vh auto;
+  }
+
+  .page-planner-bio .planner-lightbox-image-wrap {
+    padding: 1.25em 3.5em;
+    gap: 0.85em;
+  }
+
+  .page-planner-bio .planner-lightbox-image-wrap img {
+    max-height: calc(100% - 4.5em);
+  }
+
+  .page-planner-bio .planner-lightbox-caption {
+    width: min(92%, 92vw);
+    font-size: 0.9em;
+    padding: 0.8em 0.9em;
+  }
+}
