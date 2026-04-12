@@ -3592,15 +3592,37 @@ footer.major {
   background: linear-gradient(135deg, var(--ns-navy) 0%, var(--ns-light-blue) 100%) !important;
   color: #ffffff !important;
   text-align: center;
-  padding: 5em 2em 4em 2em;
-  min-height: 320px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 3.5em 0 4.5em 0; /* gradient visible above and below bar */
+  min-height: 0;
+  display: block;
 }
 
-.page-home #header {
-  padding: 6em 2em 5em 2em;
+/* full-width white logo bar floating inside gradient */
+.header-logo-bar {
+  width: 100%;
+  background: #ffffff;
+  padding: 2.25em 0;
+  margin: 0 auto 3em auto;
+  box-shadow: 0 0.35em 1em rgba(11, 31, 68, 0.08);
+  border-top: 1px solid rgba(0, 36, 93, 0.06);
+  border-bottom: 3px solid var(--ns-green);
+}
+
+/* centered logo inside full-width bar */
+.header-logo-bar .logo-image,
+#header .header-logo-bar .logo-image {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* text below the bar */
+.header-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2em;
 }
 
 #header h1,
@@ -3610,10 +3632,36 @@ footer.major {
   color: #ffffff !important;
 }
 
+#header h1 {
+  margin: 0 0 0.55em 0;
+}
+
 #header p {
   max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 736px) {
+  #header {
+    padding: 2em 0 3em 0;
+  }
+
+  .header-logo-bar {
+    padding: 1.4em 0;
+    margin-bottom: 2em;
+  }
+
+  .header-logo-bar .logo-image,
+  #header .header-logo-bar .logo-image {
+    max-width: 360px;
+  }
+
+  #header p {
+    font-size: 1em;
+    padding: 0 1.25em;
+  }
 }
 
 .logo-image,
@@ -4684,7 +4732,7 @@ body.lightbox-open {
 }
 
 @media screen and (max-width: 736px) {
-  #header {
+  # {
     padding: 4.5em 1.5em 4em 1.5em;
     min-height: auto;
   }
@@ -4694,7 +4742,7 @@ body.lightbox-open {
   }
 
   .logo-image,
-  #header .logo-image {
+  # .logo-image {
     max-width: 380px;
   }
 
@@ -4781,7 +4829,7 @@ body.lightbox-open {
   }
 }
 
-#header {
+# {
   background: linear-gradient(135deg, var(--ns-navy) 0%, var(--ns-light-blue) 100%) !important;
   color: #ffffff !important;
   text-align: center;
@@ -4791,7 +4839,7 @@ body.lightbox-open {
 }
 
 /* full-width white band */
-.header-logo-band {
+.-logo-band {
   width: 100%;
   background: #ffffff;
   padding: 2em 0;
