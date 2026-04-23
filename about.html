@@ -120,63 +120,38 @@
     </a>
   </article>
 
-		<section class="donation-suggest-wrap">
+	<!--	<section class="donation-suggest-wrap">
   <div class="donation-suggest-card">
     <h3>Have an idea for a future organization? Let us know!</h3>
     <p>
       We love hearing from the community. Share a nonprofit or organization you think North Star Support Co.
       should consider supporting in a future quarter.
-    </p>
+    </p> -->
 
-    <form action="https://api.web3forms.com/submit" method="POST" class="donation-suggest-form">
-      <input type="hidden" name="access_key" value="dd2201ea-1331-4d75-be3f-eecd15235004" />
-      <input type="hidden" name="subject" value="New Donation Recommendation Submission" />
-      <input type="hidden" name="from_name" value="North Star Support Co. Website" />
-      <input type="checkbox" name="botcheck" style="display:none;" />
+    <div class="donation-suggest-compact">
+  <h4>Have an idea for a future organization? Let us know!</h4>
 
-      <div class="field-group">
-        <label for="org-name">Organization Name</label>
-        <input type="text" id="org-name" name="Organization Name" />
-      </div>
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="dd2201ea-1331-4d75-be3f-eecd15235004" />
+    <input type="checkbox" name="botcheck" style="display:none;" />
 
-      <div class="field-group">
-        <label for="org-website">Organization Website</label>
-        <input type="text" id="org-website" name="Organization Website" placeholder="https://..." />
-      </div>
+    <div class="compact-row">
+      <input type="text" name="Organization Name" placeholder="Organization name" />
+      <input type="text" name="Organization Website" placeholder="Website (optional)" />
+    </div>
 
-      <div class="field-group">
-        <label for="org-mission">What do they do?</label>
-        <textarea id="org-mission" name="What They Do" rows="4"></textarea>
-      </div>
+    <textarea name="Why Recommended" placeholder="Why do you recommend them?" rows="3"></textarea>
 
-      <div class="field-group">
-        <label for="org-why">Why do you recommend them?</label>
-        <textarea id="org-why" name="Why Recommended" rows="5"></textarea>
-      </div>
+    <div class="compact-row">
+      <input type="text" name="Suggested By" placeholder="Your name (optional)" />
+      <input type="email" name="Suggested Email" placeholder="Email (optional)" />
+    </div>
 
-      <div class="donation-suggest-grid">
-        <div class="field-group">
-          <label for="suggested-by">Your Name (optional)</label>
-          <input type="text" id="suggested-by" name="Suggested By" />
-        </div>
-
-        <div class="field-group">
-          <label for="suggested-email">Your Email (optional)</label>
-          <input type="email" id="suggested-email" name="Suggested By Email" />
-        </div>
-      </div>
-
-      <div class="field-group">
-        <label for="org-location">Anything else we should know?</label>
-        <textarea id="org-location" name="Additional Notes" rows="3"></textarea>
-      </div>
-
-      <div class="donation-suggest-actions">
-        <button type="submit" class="button">Send Recommendation</button>
-      </div>
-    </form>
-  </div>
-</section>
+    <div class="compact-actions">
+      <button type="submit" class="button small">Submit</button>
+    </div>
+  </form>
+</div>
 
 <!-- <div class="donation-cta">
   <a href="your-form-link.html" class="button donation-button">
