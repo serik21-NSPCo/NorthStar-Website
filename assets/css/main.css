@@ -4992,3 +4992,62 @@ input[type="button"].alt:hover {
 #footer {
   text-align: center;
 }
+
+/* Donation recommendation form */
+.donation-suggest-wrap {
+  margin: 2em auto 0 auto;
+}
+
+.donation-suggest-card {
+  background: var(--ns-soft);
+  border: 1px solid rgba(0, 36, 93, 0.08);
+  border-left: 5px solid var(--ns-green);
+  border-radius: 0.9em;
+  box-shadow: var(--ns-shadow);
+  padding: 2em;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.donation-suggest-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.6em;
+  color: var(--ns-navy) !important;
+  text-align: center;
+}
+
+.donation-suggest-card p {
+  max-width: 760px;
+  margin: 0 auto 1.5em auto;
+  text-align: center;
+}
+
+.donation-suggest-form {
+  margin: 0;
+}
+
+.donation-suggest-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1em;
+}
+
+.donation-suggest-actions {
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+.donation-suggest-actions .button {
+  min-width: 0;
+  padding: 0 1.5em;
+}
+
+@media screen and (max-width: 736px) {
+  .donation-suggest-card {
+    padding: 1.5em;
+  }
+
+  .donation-suggest-grid {
+    grid-template-columns: 1fr;
+  }
+}
