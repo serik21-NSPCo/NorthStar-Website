@@ -5051,3 +5051,58 @@ input[type="button"].alt:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* Compact donation suggestion form */
+.donation-suggest-compact {
+  margin-top: 1.5em;
+  padding-top: 1.5em;
+  border-top: 1px solid rgba(0, 36, 93, 0.08);
+}
+
+.donation-suggest-compact h4 {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 0.95em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #00245d;
+}
+
+/* tighter rows */
+.compact-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+/* inputs */
+.donation-suggest-compact input,
+.donation-suggest-compact textarea {
+  width: 100%;
+  padding: 0.55em 0.7em;
+  font-size: 0.85em;
+  border-radius: 0.4em;
+}
+
+/* textarea spacing */
+.donation-suggest-compact textarea {
+  margin-bottom: 0.75em;
+}
+
+/* button */
+.compact-actions {
+  text-align: center;
+}
+
+.compact-actions .button.small {
+  padding: 0.45em 1em;
+  font-size: 0.75em;
+}
+
+/* mobile */
+@media screen and (max-width: 736px) {
+  .compact-row {
+    grid-template-columns: 1fr;
+  }
+}
